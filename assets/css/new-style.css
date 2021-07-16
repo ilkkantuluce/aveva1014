@@ -252,7 +252,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 
 @media only screen and (max-width: 480px) {
@@ -424,26 +424,28 @@ body::-webkit-scrollbar {
   color: #363d42;
 }
 
-.scenes-wrapper .show-on-level {
-  display: none
+.scenes-wrapper .title-wrapper.show-on-level div {
+  opacity: 0;
+  position: absolute;
+  max-width: 340px;
 }
 
 .level-plant .chemicals .col-right .show-on-level {
-  display: block;
 }
 
 .level-enterprise .chemicals .col-left .show-on-level {
-  display: block;
 }
 
-.title-wrapper {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-name: show-on-level;
-  animation-name: show-on-level;
+
+.industry .chemicals .col-left .hide-on-level,
+.industry .chemicals .col-right .hide-on-level {
+  position: relative;
+  display: block !important;
+}
+
+.level .industry .chemicals .col-left .hide-on-level
+.level .industry .chemicals .col-right .hide-on-level {
+  display: block !important;
 }
 
 .col-wrapper {
@@ -588,8 +590,7 @@ body::-webkit-scrollbar {
 @keyframes show-on-level {
   0% {
     opacity: 0;
-    display: block;
-    transform: translate(0px, 0px) scale(0.5);
+    transform: translate(100px, 0px) scale(0.5);
   }
   100% {
     opacity: 1;
@@ -628,40 +629,40 @@ body::-webkit-scrollbar {
 }
 
 .industry.level-plant .chemicals .col-right .video-wrapper {
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease;
 }
 
 .industry.level-plant .chemicals .col-right .video {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease;
   -webkit-animation-name: make-bigger;
   animation-name: make-bigger;
   z-index: 10000;
 }
 
 .industry.level-enterprise .chemicals .col-left .video-wrapper {
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
   animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease;
 }
 
 .industry.level-enterprise .chemicals .col-left .video {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
   animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-name: make-bigger;
-  animation-name: make-bigger;
+  animation-timing-function: ease;
+  -webkit-animation-name: make-bigger2;
+  animation-name: make-bigger2;
   z-index: 10000;
 }
 
@@ -683,6 +684,7 @@ body::-webkit-scrollbar {
   bottom: 110px;
   border-left: 2px solid #6b05a8;
   left: -100%;
+  display: none;
 }
 
 .pulse-dot {
@@ -805,30 +807,47 @@ body::-webkit-scrollbar {
   max-width: unset;
 }
 
-.level .col-wrapper .col {
-  flex-basis: 100%;
+.scenes-wrapper .show-on-level.title-wrapper h2.underline::after {
+  content: '';
+  display: block;
+  width: 88px;
+  height: 3px;
+  background-image: linear-gradient(to right, #ffbc00, #f70656);
+  margin: 15px auto 32px;
 }
 
-.level .box-wrapper {
-  display: flex;
+.scenes-wrapper .show-on-level.title-wrapper h2.left::after {
+  margin: 15px 0 32px;
+}
+
+.scenes-wrapper .show-on-level.title-wrapper p {
+  font-family: Muli-Regular;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+
+.scenes-wrapper .show-on-level, .scenes-wrapper .show-on-level * {
+  transition: opacity 1s ease-in-out;
 }
 
 .level .hide-on-level {
-  flex-basis: 50%;
+  position: relative;
 }
 
-.level .title-wrapper {
-  flex-basis: 50%;
+.scenes-wrapper .show-on-level.title-wrapper h2 {
+  font-family: Barlow-Light;
+  font-weight: 300;
+  font-size: 36px;
+  color: #000;
 }
 
-.level .title-wrapper div {
-  max-width: 340px;
+.level.level-plant .col-left .box-wrapper,
+.level.level-enterprise .col-right .box-wrapper {
+  overflow: hidden;
 }
 
-.level.level-plant .col-enterprise {
-  display: none;
-}
-
-.level.level-enterprise .col-plant {
+.level.level-plant .col-left .show-on-level,
+.level.level-enterprise .col-right .show-on-level {
   display: none;
 }
