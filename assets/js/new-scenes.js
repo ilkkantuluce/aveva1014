@@ -36,17 +36,24 @@ $(document).ready(function() {
     }, 200);
   
     setTimeout(function() {
-      $('.box-wrapper').css('display', 'flex');
-      $('.col-wrapper .col').css('flex-basis', '100%');
-      $('.title-wrapper').css('flex-basis', '50%');
-      $('.hide-on-level').css('flex-basis', '50%');
+      $('.level-plant .box-wrapper').css('display', 'flex');
+      $('.level-plant .col-wrapper .col').css('flex-basis', '100%');
+      $('.level-plant .title-wrapper').css('flex-basis', '50%');
+      $('.level-plant .hide-on-level').css('flex-basis', '50%');
+      $('.level-button-plant').hide();
       $('.level.level-plant .col-enterprise').hide();
       $('.level.level-enterprise .col-plant').hide();
-
-
-
-
     }, 500);
+
+
+    $('.level-enterprise .box-wrapper').css('display', 'flex');
+    $('.level-enterprise .col-wrapper .col').css('flex-basis', '100%');
+    $('.level-enterprise .title-wrapper').css('flex-basis', '50%');
+    $('.level-enterprise .hide-on-level').css('flex-basis', '50%');
+    $('.level-button-enterprise').hide();
+
+
+
 
     setTimeout(function() {
       $('.pulse-dot').addClass('show-dot');

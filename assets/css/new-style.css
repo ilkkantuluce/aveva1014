@@ -589,9 +589,11 @@ body::-webkit-scrollbar {
 @keyframes make-bigger2 {
   0% {
     transform: translate(-5px, 50px) scale(1.6);
+    opacity: 0;
   }
   100% {
     transform: translate(-5px, 50px) scale(2.8);
+    opacity: 1;
   }
 }
 
@@ -656,8 +658,6 @@ body::-webkit-scrollbar {
 .industry.level-enterprise .chemicals .col-left .video-wrapper {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
 }
@@ -665,8 +665,6 @@ body::-webkit-scrollbar {
 .industry.level-enterprise .chemicals .col-left .video {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
   -webkit-animation-name: make-bigger2;
@@ -731,7 +729,7 @@ body::-webkit-scrollbar {
   left: 0px;
   opacity: 1;
   transition: all .5s ease;
-
+  transform: scale(1);
 }
 
 .pulse-dot .tooltip {
@@ -743,12 +741,13 @@ body::-webkit-scrollbar {
   position: absolute;
   padding: 5px 15px 5px 15px;
   white-space: nowrap;
-  top: -40px;
-  left: 0px;
+  top: -30px;
+  left: -37px;
   opacity: 0;
   transition: all .5s;
   z-index: 5;
-  pointer-events: none
+  pointer-events: none;
+  transform: scale(0.5);
 }
 
 .pulse-dot .tooltip::after {
@@ -1013,4 +1012,26 @@ body::-webkit-scrollbar {
 }
 .sidebar-to-front {
   z-index: 6
+}
+
+.level .col-wrapper .col .video-wrapper {
+    position: relative;
+    transition: all 2s ease-in-out;
+    margin-left: 0px;
+    overflow: visible;
+}
+
+@media only screen and (min-width: 1025px) {
+  .level.level-scale-up .video-wrapper {
+    transform: scale3d(1.25, 1.25, 1.5);
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  .level.level-scale-up .video-wrapper {
+    transform: scale3d(1.25, 1.25, 1.5);
+  }
+}
+
+.scenes-wrapper .col .video {
+  max-width: 100%;
 }

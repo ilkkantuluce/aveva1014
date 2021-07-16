@@ -1375,7 +1375,7 @@ body::-webkit-scrollbar {
 .level.level-enterprise .col-plant {
   display: none
 }
-/*
+
 @media only screen and (min-width: 1025px) {
   .level-plant .video {
     transform: scale3d(1.5, 1.5, 1.5) translate(50px, 100px)
@@ -1390,7 +1390,7 @@ body::-webkit-scrollbar {
   .level-plant .video {
     transform: scale(1.4) translateX(-5px)
   }
-}*/
+}
 .level-plant:not(.sidebar-active) .scenes-wrapper {
   min-height: calc(100vh - 150px);
   height: 100%
