@@ -2,6 +2,8 @@ $(document).ready(function() {
   $('.level-button').on('click', function(e) {
     e.preventDefault();
 
+    $('.nav-link').not('.level-link a').removeClass('active');
+
 
     var activeLevel;
     var inactiveLevel;

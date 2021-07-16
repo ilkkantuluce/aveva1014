@@ -394,6 +394,14 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.level-enterprise .level-link-enterprise {
+  display: inline;
+}
+
+.level-plant .level-link-plant {
+  display: inline;
+}
+
 .industry .main-title-wrapper h2 {
   font-family: Barlow-Light;
   font-weight: 300;
