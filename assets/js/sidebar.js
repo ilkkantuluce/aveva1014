@@ -2,6 +2,8 @@ $(document).ready(function() {
   $('.pulse-dot').on('click', function() {
     var sidebar = $(this).data('sidebar');
 
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+
     // start scale
     $('.industry').addClass('level-scale-up');
 

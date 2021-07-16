@@ -438,12 +438,9 @@ body::-webkit-scrollbar {
   max-width: 340px;
 }
 
-.level-plant .chemicals .col-right .show-on-level {
-}
+.level-plant .chemicals .col-right .show-on-level {}
 
-.level-enterprise .chemicals .col-left .show-on-level {
-}
-
+.level-enterprise .chemicals .col-left .show-on-level {}
 
 .industry .chemicals .col-left .hide-on-level,
 .industry .chemicals .col-right .hide-on-level {
@@ -451,8 +448,7 @@ body::-webkit-scrollbar {
   display: block !important;
 }
 
-.level .industry .chemicals .col-left .hide-on-level
-.level .industry .chemicals .col-right .hide-on-level {
+.level .industry .chemicals .col-left .hide-on-level .level .industry .chemicals .col-right .hide-on-level {
   display: block !important;
 }
 
@@ -592,7 +588,7 @@ body::-webkit-scrollbar {
     opacity: 0;
   }
   100% {
-    transform: translate(-5px, 50px) scale(2.8);
+    transform: translate(-5px, 50px) scale(3.4);
     opacity: 1;
   }
 }
@@ -823,6 +819,21 @@ body::-webkit-scrollbar {
   left: 45%;
 }
 
+.level-enterprise .chemicals .sustainability {
+  top: 10%;
+  left: 33%;
+}
+
+.level-enterprise .chemicals .performance {
+  top: 10%;
+  left: 70%;
+}
+
+.level-enterprise .chemicals .competency {
+  top: 50%;
+  left: 59%;
+}
+
 .level .col-wrapper .col .video-wrapper .video-overlay {
   position: absolute;
   top: 0;
@@ -853,7 +864,8 @@ body::-webkit-scrollbar {
   letter-spacing: 0px;
 }
 
-.scenes-wrapper .show-on-level, .scenes-wrapper .show-on-level * {
+.scenes-wrapper .show-on-level,
+.scenes-wrapper .show-on-level * {
   transition: all 0.5s ease-in-out;
 }
 
@@ -889,6 +901,7 @@ body::-webkit-scrollbar {
   transition: right 1s ease-in-out;
   transition-delay: 1s
 }
+
 /*
 @media only screen and (min-width: 1025px) {
   .sidebar-wrapper {
@@ -900,6 +913,7 @@ body::-webkit-scrollbar {
     overflow: hidden
   }
 }*/
+
 @media only screen and (max-width: 1024px) {
   .sidebar-wrapper {
     max-width: 100%;
@@ -907,6 +921,7 @@ body::-webkit-scrollbar {
     position: relative
   }
 }
+
 .sidebar-wrapper .sidebar {
   width: 100%;
   position: absolute;
@@ -917,11 +932,13 @@ body::-webkit-scrollbar {
   box-shadow: -18px 4px 16px 0 rgba(0, 0, 0, 0.1);
   transition: right 2s ease-in-out
 }
+
 .sidebar-wrapper .sidebar .purple-gradient-section {
   background-image: linear-gradient(128deg, #3e1253 7%, #5a0d87 67%);
   padding: 22px 35px 30px;
   position: relative
 }
+
 .sidebar-wrapper .sidebar .purple-gradient-section h4 {
   font-family: Barlow-Regular;
   font-size: 24px;
@@ -929,12 +946,14 @@ body::-webkit-scrollbar {
   color: #fff;
   font-weight: normal
 }
+
 .sidebar-wrapper .sidebar .purple-gradient-section p {
   font-family: Muli-Regular;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0px
 }
+
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
   .sidebar-wrapper .sidebar .purple-gradient-section {
     padding: 43px 50px 15px
@@ -946,57 +965,69 @@ body::-webkit-scrollbar {
     margin-bottom: 15px
   }
 }
+
 @media only screen and (max-width: 480px) {
   .sidebar-wrapper .sidebar .purple-gradient-section {
     padding: 30px 45px 30px
   }
 }
+
 .sidebar-wrapper .sidebar .purple-gradient-section .sidebar-close {
   position: absolute;
   top: 20px;
   right: 20px;
   cursor: pointer
 }
+
 .sidebar-wrapper .sidebar .white-section {
   background-color: rgba(255, 255, 255, 0.95);
   height: 100%;
   padding: 60px 75px 0 35px
 }
+
 @media only screen and (max-width: 1024px) {
   .sidebar-wrapper .sidebar .white-section {
     height: initial
   }
 }
+
 .sidebar-wrapper .sidebar .white-section p {
   font-family: Muli-Regular;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0px
 }
+
 .sidebar-wrapper .sidebar .white-section .icon-wrapper {
   display: flex;
   margin-bottom: 25px
 }
+
 .sidebar-wrapper .sidebar .white-section .icon-wrapper .icon {
   flex: 0 0 62px;
   margin-right: 16px
 }
+
 .sidebar-wrapper .sidebar .white-section .top {
   padding-bottom: 40px;
   margin-bottom: 52px;
   border-bottom: 1px solid #ddd
 }
+
 .sidebar-active .sidebar-wrapper {
   z-index: 3;
   display: block
 }
+
 .sidebar-active .show-sidebar {
   right: 0
 }
+
 .sidebar-active .top-nav {
   position: relative;
   z-index: 1
 }
+
 @media only screen and (min-width: 1025px) {
   .sidebar-active .top-nav {
     background-color: #23282b
@@ -1005,20 +1036,22 @@ body::-webkit-scrollbar {
     color: #fff
   }
 }
+
 @media only screen and (max-width: 1024px) {
   .sidebar-above .sidebar-wrapper {
     overflow: visible
   }
 }
+
 .sidebar-to-front {
   z-index: 6
 }
 
 .level .col-wrapper .col .video-wrapper {
-    position: relative;
-    transition: all 2s ease-in-out;
-    margin-left: 0px;
-    overflow: visible;
+  position: relative;
+  transition: all 2s ease-in-out;
+  margin-left: 0px;
+  overflow: visible;
 }
 
 @media only screen and (min-width: 1025px) {
@@ -1026,6 +1059,7 @@ body::-webkit-scrollbar {
     transform: scale3d(1.25, 1.25, 1.5);
   }
 }
+
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
   .level.level-scale-up .video-wrapper {
     transform: scale3d(1.25, 1.25, 1.5);

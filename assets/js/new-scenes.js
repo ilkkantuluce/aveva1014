@@ -58,9 +58,10 @@ $(document).ready(function() {
     setTimeout(function() {
       $('.pulse-dot').addClass('show-dot');
       $('.show-on-level').addClass('fade-in');
-
       $('.legend').css({'left': '-15%', 'transition': '1s'});
-    }, 3000);
+    }, 2000);
+
+    
   });
 
 

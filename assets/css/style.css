@@ -1375,7 +1375,6 @@ body::-webkit-scrollbar {
 .level.level-enterprise .col-plant {
   display: none
 }
-
 @media only screen and (min-width: 1025px) {
   .level-plant .video {
     transform: scale3d(1.5, 1.5, 1.5) translate(50px, 100px)
