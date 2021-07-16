@@ -10,7 +10,7 @@ $(document).ready(function() {
     // move left
     $('.industry').addClass('level-move-left');
 
-    $('.video-wrapper').animate({left: '-95%'});
+    $('.video-wrapper').animate({left: '-130%'});
     $('.scenes-wrapper .title-wrapper.show-on-level div').animate({left: '-75%'});
     $('.level .legend.show-on-level').animate({left: '-75%'});
 
