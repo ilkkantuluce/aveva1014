@@ -1,0 +1,70 @@
+.industry {
+  background-color: $blue-scene-bg;
+
+  @include non-desktop {
+    padding-bottom: 50px;
+  }
+
+  .container {
+    max-width: 920px;
+
+    @include tablet {
+      max-width: 710px;
+    }
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+
+  &:not(.level) {
+    .box-wrapper {
+      max-width: 460px;
+
+      @include tablet {
+        max-width: 400px;
+      }
+
+      @include mobile {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .video-wrapper {
+        height: 360px;
+
+        @include tablet {
+          max-height: 320px;
+          height: 100%;
+        }
+
+        @include mobile {
+          max-height: 400px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .level-link {
+    display: none;
+  }
+
+  .level .scenes-wrapper {
+    margin-top: 0;
+  }
+
+  .main-title-wrapper {
+    h2 {
+      @include h2;
+    }
+
+    h3 {
+      @include h3;
+    }
+
+    p {
+      @include p;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@font-face{font-family:'Barlow-Regular';src:url(../fonts/Barlow-Regular.eot);src:url(../fonts/Barlow-Regular.eot?#iefix) format("embedded-opentype"),url(../fonts/Barlow-Regular.woff2) format("woff2"),url(../fonts/Barlow-Regular.woff) format("woff"),url(../fonts/Barlow-Regular.ttf) format("truetype"),url(../fonts/Barlow-Regular.svg#Barlow-Regular) format("svg");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Barlow-Bold';src:url(../fonts/Barlow-Bold.eot);src:url(../fonts/Barlow-Bold.eot?#iefix) format("embedded-opentype"),url(../fonts/Barlow-Bold.woff2) format("woff2"),url(../fonts/Barlow-Bold.woff) format("woff"),url(../fonts/Barlow-Bold.ttf) format("truetype"),url(../fonts/Barlow-Bold.svg#Barlow-Bold) format("svg");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Barlow-Medium';src:url(../fonts/Barlow-Medium.eot);src:url(../fonts/Barlow-Medium.eot?#iefix) format("embedded-opentype"),url(../fonts/Barlow-Medium.woff2) format("woff2"),url(../fonts/Barlow-Medium.woff) format("woff"),url(../fonts/Barlow-Medium.ttf) format("truetype"),url(../fonts/Barlow-Medium.svg#Barlow-Medium) format("svg");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:'Barlow-SemiBold';src:url(../fonts/Barlow-SemiBold.eot);src:url(../fonts/Barlow-SemiBold.eot?#iefix) format("embedded-opentype"),url(../fonts/Barlow-SemiBold.woff2) format("woff2"),url(../fonts/Barlow-SemiBold.woff) format("woff"),url(../fonts/Barlow-SemiBold.ttf) format("truetype"),url(../fonts/Barlow-SemiBold.svg#Barlow-SemiBold) format("svg");font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:'Barlow-Light';src:url(../fonts/Barlow-Light.eot);src:url(../fonts/Barlow-Light.eot?#iefix) format("embedded-opentype"),url(../fonts/Barlow-Light.woff2) format("woff2"),url(../fonts/Barlow-Light.woff) format("woff"),url(../fonts/Barlow-Light.ttf) format("truetype"),url(../fonts/Barlow-Light.svg#Barlow-Light) format("svg");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:'Barlow-ExtraBold';src:url(../fonts/Barlow-ExtraBold.eot);src:url(../fonts/Barlow-ExtraBold.eot?#iefix) format("embedded-opentype"),url(../fonts/Barlow-ExtraBold.woff2) format("woff2"),url(../fonts/Barlow-ExtraBold.woff) format("woff"),url(../fonts/Barlow-ExtraBold.ttf) format("truetype"),url(../fonts/Barlow-ExtraBold.svg#Barlow-ExtraBold) format("svg");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Muli-SemiBold';src:url(../fonts/Muli-SemiBold.eot);src:url(../fonts/Muli-SemiBold.eot?#iefix) format("embedded-opentype"),url(../fonts/Muli-SemiBold.woff2) format("woff2"),url(../fonts/Muli-SemiBold.woff) format("woff"),url(../fonts/Muli-SemiBold.ttf) format("truetype"),url(../fonts/Muli-SemiBold.svg#Muli-SemiBold) format("svg");font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:'Muli-Regular';src:url(../fonts/Muli-Regular.eot);src:url(../fonts/Muli-Regular.eot?#iefix) format("embedded-opentype"),url(../fonts/Muli-Regular.woff2) format("woff2"),url(../fonts/Muli-Regular.woff) format("woff"),url(../fonts/Muli-Regular.ttf) format("truetype"),url(../fonts/Muli-Regular.svg#Muli-Regular) format("svg");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Muli-ExtraBold';src:url(../fonts/Muli-ExtraBold.eot);src:url(../fonts/Muli-ExtraBold.eot?#iefix) format("embedded-opentype"),url(../fonts/Muli-ExtraBold.woff2) format("woff2"),url(../fonts/Muli-ExtraBold.woff) format("woff"),url(../fonts/Muli-ExtraBold.ttf) format("truetype"),url(../fonts/Muli-ExtraBold.svg#Muli-ExtraBold) format("svg");font-weight:700;font-style:normal;font-display:swap;}
+
+h1, .splash.purple h1:after {font-family:Barlow-Bold, Arial, Helvetica, sans-serif;}
+h2 {font-family:Barlow-Light, Arial, Helvetica, sans-serif;}
+h3, .pulse-dot .tooltip {font-family:Barlow-Medium, Arial, Helvetica, sans-serif;}
+h4 {font-family:Barlow-Regular, Arial, Helvetica, sans-serif;}
+p, .scenes-wrapper p.scenes-label {font-family:Muli-Regular, Arial, Helvetica, sans-serif;}
+body {font-family:Barlow-Light, Arial, Helvetica, sans-serif;}
+.button, .nav-link {font-family:Barlow-SemiBold, Arial, Helvetica, sans-serif;}
+.splash.purple * {transition:none!important;}
+
+@-webkit-keyframes pulse-before{
+  0%{box-shadow:0 0 0 0 rgba(245,166,36,0.4)}
+  3%{box-shadow:0 0 0 20px rgba(245,166,36,0.4)}
+  35%{box-shadow:0 0 0 56px rgba(245,166,36,0)}
+}
+@keyframes pulse-before{
+  0%{box-shadow:0 0 0 0 rgba(245,166,36,0.4)}
+  3%{box-shadow:0 0 0 20px rgba(245,166,36,0.4)}
+  35%{box-shadow:0 0 0 56px rgba(245,166,36,0)}
+}
+@-webkit-keyframes pulse-after{
+  15%{box-shadow:0 0 0 0 rgba(245,166,36,0.2)}
+  18%{box-shadow:0 0 0 10px rgba(245,166,36,0.2)}
+  50%{box-shadow:0 0 0 70px rgba(245,166,36,0)}
+}
+@keyframes pulse-after{
+  15%{box-shadow:0 0 0 0 rgba(245,166,36,0.2)}
+  18%{box-shadow:0 0 0 10px rgba(245,166,36,0.2)}
+  50%{box-shadow:0 0 0 70px rgba(245,166,36,0)}
+}

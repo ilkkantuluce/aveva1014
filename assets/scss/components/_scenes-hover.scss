@@ -1,0 +1,223 @@
+@keyframes hover-scene {
+  0% {
+    $moveLeft: var(--moveLeft);
+    $moveDown: var(--moveDown);
+    transform: translate($moveLeft, $moveDown) scale(var(--scaleAmount));
+  }
+
+  25% {
+    $moveLeft: calc(var(--moveLeft) + 5px);
+    $moveDown: var(--moveDown);
+    transform: translate($moveLeft, $moveDown) scale(var(--scaleAmount));
+  }
+
+  50% {
+    $moveLeft: calc(var(--moveLeft) + 5px);
+    $moveDown: calc(var(--moveDown) + 5px);
+    transform: translate($moveLeft, $moveDown) scale(var(--scaleAmount));
+  }
+
+  75% {
+    $moveDown: calc(var(--moveDown) + 5px);
+    transform: translate(var(--moveLeft), $moveDown) scale(var(--scaleAmount));
+  }
+
+  100% {
+    transform: translate(var(--moveLeft), var(--moveDown)) scale(var(--scaleAmount));
+  }
+}
+
+.industry:not(.level) {
+  .video {
+    animation-name: hover-scene;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  .col-right .video {
+    animation-direction: alternate-reverse;
+  }
+
+  .chemicals {
+    .col-left {
+      .video {
+        --scaleAmount: 1.6;
+        --moveLeft: -10px;
+        --moveDown: 25px;
+
+        @include tablet {
+          --scaleAmount: 1.7;
+          --moveDown: 30px;
+        }
+
+        @include mobile {
+          --scaleAmount: 1.75;
+          --moveDown: -50%;
+          --moveLeft: -10px;
+          margin-top: 50%;
+        }
+
+        transform: translate(var(--moveLeft), var(--moveDown)) scale(var(--scaleAmount));
+      }
+    }
+
+    .col-right {
+      .video {
+        --scaleAmount: 1.25;
+        --moveLeft: -5px;
+        --moveDown: 50px;
+
+        @include tablet {
+          --moveDown: 60px;
+        }
+
+        @include mobile {
+          --scaleAmount: 1.3;
+          --moveDown: -50%;
+          --moveLeft: -10px;
+          margin-top: 50%;
+        }
+
+        transform: translate(var(--moveLeft), var(--moveDown)) scale(var(--scaleAmount));
+      }
+    }
+  }
+
+  .consumer-products {
+    .col-left {
+      .video {
+        --scaleAmount: 1.5;
+        --moveLeft: 5px;
+        --moveDown: 50px;
+
+        @include tablet {
+          --scaleAmount: 1.7;
+          --moveDown: 50px;
+        }
+
+        @include mobile {
+          --scaleAmount: 1.75;
+          --moveDown: -50%;
+          --moveLeft: 0px;
+          margin-top: 50%;
+        }
+
+        transform: translate(var(--moveLeft), var(--moveDown)) scale(var(--scaleAmount));
+      }
+    }
+
+    .col-right {
+      .video {
+        --scaleAmount: 1.2;
+        --moveLeft: 5px;
+        --moveDown: 25px;
+
+        @include tablet {
+          --scaleAmount: 1.3;
+          --moveDown: 25px;
+        }
+
+        @include mobile {
+          --scaleAmount: 1.3;
+          --moveDown: -50%;
+          --moveLeft: 5px;
+          margin-top: 50%;
+        }
+
+        transform: translate(var(--moveLeft), var(--moveDown)) scale(var(--scaleAmount));
+      }
+    }
+  }
+
+  .energy {
+    .col-left {
+      .video {
+        --scaleAmount: 1.5;
+        --moveLeft: 5px;
+        --moveDown: 20px;
+
+        @include tablet {
+          --scaleAmount: 1.7;
+          --moveDown: 30px;
+        }
+
+        @include mobile {
+          --scaleAmount: 1.75;
+          --moveDown: -50%;
+          --moveLeft: 0px;
+          margin-top: 50%;
+        }
+
+        transform: translate(var(--moveLeft), var(--moveDown)) scale(var(--scaleAmount));
+      }
+    }
+
+    .col-right {
+      .video {
+        --scaleAmount: 1.2;
+        --moveLeft: 5px;
+        --moveDown: 30px;
+
+        @include tablet {
+          --scaleAmount: 1.25;
+          --moveDown: 45px;
+        }
+
+        @include mobile {
+          --scaleAmount: 1.3;
+          --moveDown: -50%;
+          --moveLeft: 0px;
+          margin-top: 50%;
+        }
+
+        transform: translate(var(--moveLeft), var(--moveDown)) scale(var(--scaleAmount));
+      }
+    }
+  }
+
+  .power {
+    .col-left {
+      .video {
+        --scaleAmount: 1.3;
+        --moveLeft: 5px;
+        --moveDown: 5px;
+
+        @include tablet {
+          --scaleAmount: 1.6;
+          --moveDown: 30px;
+        }
+
+        @include mobile {
+          --scaleAmount: 1.75;
+          --moveDown: -50%;
+          --moveLeft: 0px;
+          margin-top: 50%;
+        }
+
+        transform: translate(var(--moveLeft), var(--moveDown)) scale(var(--scaleAmount));
+      }
+    }
+
+    .col-right {
+      .video {
+        --scaleAmount: 1;
+        --moveLeft: 5px;
+        --moveDown: 30px;
+
+        @include tablet {
+          --moveLeft: -20px;
+        }
+
+        @include mobile {
+          --scaleAmount: 1;
+          --moveDown: -50%;
+          --moveLeft: -10px;
+          margin-top: 50%;
+        }
+
+        transform: translate(var(--moveLeft), var(--moveDown)) scale(var(--scaleAmount));
+      }
+    }
+  }
+}

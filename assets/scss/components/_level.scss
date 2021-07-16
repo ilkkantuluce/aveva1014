@@ -1,0 +1,672 @@
+.level {
+  @include non-desktop {
+    overflow-x: hidden;
+    //overflow-y: visible;
+  }
+
+  @include mobile {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .container {
+    max-width: 100vw;
+    padding: 0 45px;
+    height: 100%;
+
+    @include tablet {
+      padding: 0 20px;
+    }
+
+    @include mobile {
+      padding: 0 16px;
+      overflow: hidden;
+    }
+  }
+
+  .level-button {
+    display: none;
+  }
+
+  .show-on-level {
+    display: block;
+    margin-left: 0;
+    transition: all 2s ease-in-out;
+
+    @include desktop {
+      max-width: 340px;
+    }
+  }
+
+  .box-wrapper {
+    display: flex;
+
+    @include desktop {
+      animation: scale-width 2s forwards;
+    }
+
+    @include non-desktop {
+      flex-direction: column;
+    }
+  }
+
+  .col-wrapper {
+    min-height: 100%;
+
+    .col {
+      flex-basis: 100%;
+
+      .video-wrapper {
+        position: relative;
+        animation: scale-width 2s forwards;
+        transition: all 2s ease-in-out;
+        margin-left: 0px;
+        overflow: visible;
+
+        @include desktop {
+          max-width: calc(100% - 400px);
+          max-height: 100%;
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 1;
+        }
+
+        @include mobile {
+          margin-top: 200px;
+        }
+
+        .video {
+          transition: all 2s ease-in-out;
+          transform-origin: center;
+
+          @include desktop {
+            max-height: 882px;
+          }
+
+          @include non-desktop {
+            max-height: 645px;
+          }
+        }
+
+        .video-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 2;
+          width: 100%;
+          height: 100%;
+          max-width: unset;
+
+          //@include desktop {
+          //  margin-top: 25px;
+          //}
+        }
+      }
+    }
+  }
+
+  &.level-scale-up {
+    .video-wrapper {
+      //left: 0;
+      //right: 50% !important;
+      //overflow: visible !important;
+
+      @include desktop {
+        transform: scale3d(1.25, 1.25, 1.5);
+        margin-left: -200px !important;
+      }
+
+      @include tablet {
+        transform: scale3d(1.25, 1.25, 1.5);
+        margin-top: -100px !important;
+      }
+
+      @include mobile {
+        transform: scale3d(1.5, 1.5, 1.5);
+        margin-top: 50px !important;
+      }
+    }
+  }
+
+  &.level-move-left {
+    overflow-x: hidden;
+
+    @include desktop {
+      overflow-y: hidden;
+    }
+
+    @include mobile {
+      min-height: 100vh;
+    }
+
+    .show-on-level:not(.video-overlay) {
+      margin-left: -200%;
+    }
+
+    .video-wrapper {
+      right: 50% !important;
+      overflow: visible !important;
+    }
+
+    .video-overlay {
+      @include mobile {
+        .pulse-dot,
+        .tooltip {
+          transform: scale(0.75);
+        }
+      }
+    }
+  }
+
+  &.level-push-back {
+    .video-wrapper {
+      z-index: -1 !important;
+    }
+  }
+
+  &.level-plant {
+    .col-enterprise {
+      display: none;
+    }
+  }
+
+  &.level-enterprise {
+    .col-plant {
+      display: none;
+    }
+  }
+}
+
+.level-plant {
+  .video {
+    @include desktop {
+      transform: scale3d(1.5, 1.5, 1.5) translate(50px, 100px);
+    }
+
+    @include tablet {
+      transform: scale3d(1.25, 1.25, 1.5) translate(-10px, 100px);
+    }
+
+    @include mobile {
+      transform: scale(1.4) translateX(-5px);
+    }
+  }
+
+  &:not(.sidebar-active) {
+    .scenes-wrapper {
+      min-height: calc(100vh - 150px);
+      height: 100%;
+
+      @include tablet {
+        min-height: calc(100% - 150px);
+      }
+    }
+  }
+
+  .legend {
+    @include non-desktop {
+      bottom: unset;
+    }
+
+    @include tablet {
+      top: 200px;
+    }
+
+    @include mobile {
+      top: 250px;
+    }
+  }
+
+  .video-wrapper {
+    @include tablet {
+      min-height: 100%;
+    }
+  }
+
+  .video-overlay {
+    margin-top: -25px;
+
+    @include tablet {
+      margin-top: 25px;
+    }
+
+    @include mobile {
+      margin-top: 0;
+    }
+  }
+
+  .chemicals {
+    .margins {
+      top: 42%;
+      left: 27%;
+
+      @include tablet {
+        top: 50%;
+        left: 22%;
+      }
+
+      @include mobile {
+        top: 30%;
+        left: 18%;
+      }
+    }
+
+    .downtime {
+      top: 28%;
+      left: 69%;
+
+      @include tablet {
+        left: 55%;
+      }
+
+      @include mobile {
+        top: 17%;
+        left: 50%;
+      }
+    }
+
+    .agility {
+      top: 68%;
+      left: 60%;
+
+      @include tablet {
+        top: 80%;
+        left: 45%;
+      }
+
+      @include mobile {
+        left: 35%;
+      }
+    }
+  }
+
+  .consumer-products {
+    .legend {
+      @include tablet {
+        top: 200px;
+      }
+
+      @include mobile {
+        top: 350px;
+      }
+    }
+
+    .quality {
+      top: 40%;
+      left: 30%;
+
+      @include tablet {
+        left: 25%;
+        top: 45%;
+      }
+
+      @include mobile {
+        left: 20%;
+        top: 23%;
+      }
+    }
+
+    .reliability {
+      top: 67%;
+      left: 50%;
+
+      @include tablet {
+        top: 80%;
+        left: 40%;
+      }
+
+      @include mobile {
+        top: 40%;
+        left: 30%;
+      }
+    }
+
+    .productivity {
+      top: 63%;
+      left: 75%;
+
+      @include tablet {
+        top: 61%;
+        left: 55%;
+      }
+
+      @include mobile {
+        top: 35%;
+        left: 50%;
+      }
+    }
+  }
+
+  .energy {
+    .video-overlay {
+      @include tablet {
+        margin-top: 50px;
+      }
+
+      @include mobile {
+        margin-top: -50px;
+        margin-left: -25px;
+      }
+    }
+
+    .utilities {
+      left: 15%;
+      top: 47%;
+
+      @include tablet {
+        top: 50%;
+      }
+    }
+
+    .downtime {
+      left: 50%;
+      top: 25%;
+
+      @include tablet {
+        left: 45%;
+      }
+    }
+
+    .competency {
+      top: 47%;
+      left: 50%;
+
+      @include tablet {
+        left: 40%;
+      }
+    }
+  }
+
+  .power {
+    .video {
+      @include desktop {
+        transform: scale3d(1, 1, 1.5) translate(50px, 100px);
+      }
+
+      @include tablet {
+        transform: scale3d(1.25, 1.25, 1.5) translate(-10px, 100px);
+      }
+
+      @include mobile {
+        transform: scale(1.4) translateX(-5px);
+      }
+    }
+
+    .video-overlay {
+      @include tablet {
+        margin-top: -50px;
+        margin-left: -50px;
+      }
+
+      @include mobile {
+        margin-top: -100px;
+        margin-left: -50px;
+      }
+    }
+
+    .reliability {
+      top: 68%;
+      left: 29%;
+    }
+
+    .efficiency {
+      top: 70%;
+      left: 70%;
+    }
+
+    .workforce {
+      top: 50%;
+      left: 40%;
+    }
+  }
+
+  .level-link-plant {
+    display: inline;
+  }
+}
+
+.level-enterprise {
+  .video {
+    @include desktop {
+      transform: scale3d(1.75, 1.75, 1.5) translate(-10px, 50px);
+    }
+
+    @include tablet {
+      transform: scale3d(1.75, 1.75, 1.5) translate(-10px, 100px);
+    }
+
+    @include mobile {
+      transform: scale(2) translateX(-5px);
+    }
+  }
+
+  &:not(.sidebar-active) {
+    .scenes-wrapper {
+      min-height: calc(100vh - 150px);
+      height: 100%;
+
+      &.energy {
+        @include tablet {
+          min-height: 100vh !important;
+        }
+      }
+
+      @include tablet {
+        min-height: calc(100% - 150px);
+      }
+    }
+  }
+
+  .legend {
+    @include non-desktop {
+      bottom: unset;
+    }
+
+    @include tablet {
+      top: 200px;
+    }
+
+    @include mobile {
+      top: 275px;
+    }
+  }
+
+  .video-wrapper {
+    @include tablet {
+      min-height: 100%;
+    }
+  }
+
+  .video-overlay {
+    margin-top: -75px;
+
+    @include tablet {
+      margin-top: -25px;
+    }
+
+    @include mobile {
+      margin-top: 0;
+    }
+  }
+
+  .chemicals {
+    .sustainability {
+      top: 30%;
+      left: 40%;
+
+      @include tablet {
+        top: 41%;
+        left: 39%;
+      }
+
+      @include mobile {
+        top: 5%;
+        left: 35%;
+      }
+    }
+
+    .performance {
+      top: 30%;
+      left: 60%;
+
+      @include tablet {
+        top: 40%;
+        left: 58%;
+      }
+
+      @include mobile {
+        top: 20%;
+        left: 55%;
+      }
+    }
+
+    .competency {
+      top: 50%;
+      left: 55%;
+
+      @include tablet {
+        top: 67%;
+        left: 48%;
+      }
+
+      @include mobile {
+        left: 40%;
+      }
+    }
+  }
+
+  .consumer-products {
+    .legend {
+      @include tablet {
+        top: 200px;
+      }
+
+      @include mobile {
+        top: 400px;
+      }
+    }
+
+    .video {
+      @include desktop {
+        transform: scale3d(1.75, 1.75, 1.5) translate(0px, 50px);
+      }
+
+      @include mobile {
+        transform: scale(2) translate(-5px, 0px);
+      }
+    }
+
+    .video-overlay {
+      margin-top: -100px;
+
+      @include tablet {
+        margin-top: 0;
+      }
+    }
+
+    .sustainability {
+      top: 31%;
+      left: 38%;
+
+      @include tablet {
+        top: 34%;
+        left: 37%;
+      }
+    }
+
+    .standards {
+      top: 42%;
+      left: 14%;
+
+      @include tablet {
+        top: 48%;
+        left: 13%;
+      }
+    }
+
+    .agility {
+      top: 28%;
+      left: 54%;
+
+      @include tablet {
+        top: 31%;
+        left: 51%;
+      }
+    }
+  }
+
+  .energy {
+    .video-overlay {
+      @include tablet {
+        margin-top: 50px;
+      }
+
+      @include mobile {
+        margin-top: -75px;
+      }
+    }
+
+    .optimization {
+      top: 45%;
+      left: 15%;
+
+      @include tablet {
+
+      }
+    }
+
+    .zero {
+      top: 25%;
+      left: 40%;
+    }
+
+    .resilience {
+      top: 35%;
+      left: 50%;
+    }
+  }
+
+  .power {
+    .legend {
+      @include mobile {
+        top: 325px;
+      }
+    }
+
+    .video-overlay {
+      @include mobile {
+        margin-top: -75px;
+      }
+    }
+
+    .engineering {
+      top: 43%;
+      left: 43%;
+    }
+
+    .visibility {
+      top: 30%;
+      left: 75%;
+    }
+
+    .empowerment {
+      top: 50%;
+      left: 60%;
+    }
+  }
+
+  .level-link-enterprise {
+    display: inline;
+  }
+}
+
+@keyframes scale-width {
+  0% {
+    width: 460px;
+  }
+
+  100% {
+    width: calc(100%);
+  }
+}

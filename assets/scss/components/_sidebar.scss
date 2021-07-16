@@ -1,0 +1,139 @@
+.sidebar-wrapper {
+  position: absolute;
+  max-width: 625px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  transition: right 1s ease-in-out;
+  transition-delay: 1s;
+
+  @include desktop {
+    overflow-x: hidden;
+  }
+
+  @include non-desktop {
+    overflow: hidden;
+  }
+
+  @include non-desktop {
+    max-width: 100%;
+    left: 0;
+    position: relative;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: -200%;
+    height: 100%;
+    box-shadow: -18px 4px 16px 0 rgba($black, .1);
+    transition: right 2s ease-in-out;
+
+    .purple-gradient-section {
+      background-image: linear-gradient(128deg, $grape-purple 7%, $indigo 67%);
+      padding: 22px 35px 30px;
+      position: relative;
+
+      h4 {
+        @include h4;
+      }
+
+      p {
+        @include p;
+      }
+
+      @include tablet {
+        padding: 43px 50px 15px;
+
+        h4 {
+          margin-bottom: 20px;
+        }
+
+        .white {
+          margin-bottom: 15px;
+        }
+      }
+
+      @include mobile {
+        padding: 30px 45px 30px;
+      }
+
+      .sidebar-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+      }
+    }
+
+    .white-section {
+      background-color: rgba($white, .95);
+      height: 100%;
+      padding: 60px 75px 0 35px;
+
+      @include non-desktop {
+        height: initial;
+      }
+
+      p {
+        @include p;
+      }
+
+      .icon-wrapper {
+        display: flex;
+        margin-bottom: 25px;
+
+        .icon {
+          flex: 0 0 62px;
+          margin-right: 16px;
+        }
+      }
+
+      .top {
+        padding-bottom: 40px;
+        margin-bottom: 52px;
+        border-bottom: 1px solid $very-light-pink;
+      }
+    }
+  }
+}
+
+.sidebar-active {
+  .sidebar-wrapper {
+    z-index: 3;
+    display: block;
+  }
+
+  .show-sidebar {
+    right: 0;
+  }
+
+  .top-nav {
+    position: relative;
+    z-index: 1;
+
+    @include desktop {
+      background-color: $dark-gray;
+
+      a {
+        color: $white;
+      }
+    }
+  }
+}
+
+.sidebar-above {
+  .sidebar-wrapper {
+    @include non-desktop {
+      overflow: visible;
+    }
+  }
+}
+
+.sidebar-to-front {
+  z-index: 6;
+}

@@ -1,0 +1,48 @@
+.col-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include mobile {
+    flex-direction: column;
+    justify-content: initial;
+  }
+
+  .col {
+    width: 100%;
+
+    @include non-mobile {
+      flex-basis: 50%;
+    }
+
+    &.col-left {
+      .text-wrapper {
+        @include mobile {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+      }
+    }
+
+    &.col-full {
+      flex-basis: 50%;
+
+      @include non-desktop {
+        flex-basis: 100%;
+      }
+    }
+  }
+}
+
+.home {
+  .col-right {
+    @include desktop {
+      padding-left: 100px;
+    }
+
+    @include tablet {
+      padding-left: 30px;
+    }
+  }
+}

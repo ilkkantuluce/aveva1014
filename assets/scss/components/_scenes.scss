@@ -1,0 +1,187 @@
+.scenes-wrapper {
+  margin-top: 75px;
+  position: relative;
+
+  @include tablet {
+    margin-top: 56px;
+  }
+
+  @include mobile {
+    margin-top: 8px;
+  }
+
+  p.scenes-label {
+    font-family: Muli-Regular;
+    font-size: 18px;
+    font-weight: bold;
+    color: $charcoal-gray;
+
+    @include non-desktop {
+      margin: 20px auto 15px !important;
+    }
+  }
+
+  .button {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    top: auto;
+  }
+
+  .col {
+    @include non-mobile {
+      min-height: 408px;
+    }
+
+    .box-wrapper {
+      height: 100%;
+
+      &.change-position {
+        position: absolute;
+      }
+
+      .video-wrapper {
+        height: 100%;
+        overflow: hidden;
+      }
+    }
+
+    .video {
+      max-width: 100%;
+    }
+
+    &.col-left {
+      @include non-mobile {
+        margin-left: auto;
+      }
+
+      .box-wrapper {
+        @include tablet {
+          margin-left: auto;
+        }
+      }
+
+      @include mobile {
+        margin-bottom: 96px;
+      }
+    }
+
+    &.col-right {
+      @include non-mobile {
+        margin-left: auto;
+      }
+
+      .box-wrapper {
+        @include tablet {
+          margin-right: auto;
+        }
+      }
+    }
+  }
+
+  .show-on-level {
+    display: none;
+
+    &,
+    * {
+      @include transition-opacity;
+    }
+
+    &.title-wrapper {
+      h2 {
+        @include h2;
+      }
+
+      p {
+        @include p;
+      }
+    }
+
+    @include tablet {
+      &.title-wrapper {
+        h2,
+        p {
+          text-align: center;
+        }
+
+        h2::after {
+          margin: 15px auto 32px;
+        }
+      }
+    }
+  }
+}
+
+.push-back {
+  position: relative;
+  z-index: 0;
+}
+
+.pull-up {
+  animation: pull-up 1.5s forwards;
+  opacity: 0;
+
+  &.scenes-wrapper {
+    .button {
+      opacity: 0;
+      animation: pull-up-button 1.5s forwards;
+      animation-delay: 1s;
+    }
+  }
+
+  &:nth-child(2) {
+    animation-delay: .2s;
+  }
+
+  &:last-child {
+    animation-delay: .6s;
+  }
+}
+
+.fade {
+  &.out {
+    animation: fade 1s forwards;
+  }
+}
+
+@keyframes pull-up {
+  0% {
+    padding-top: 50px;
+    opacity: 0;
+  }
+
+  50% {
+    padding-top: 0;
+  }
+
+  100% {
+    padding-top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes pull-up-button {
+  0% {
+    margin-top: 50px;
+    opacity: 0;
+  }
+
+  50% {
+    margin-top: 0;
+  }
+
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,151 @@
+.splash {
+  height: 100%;
+
+  .container {
+    height: 100%;
+
+    @include tablet {
+      padding-bottom: 75px;
+      height: auto;
+    }
+  }
+
+  h1 {
+    @include h1;
+  }
+
+  &.purple {
+    background-image: linear-gradient(to left, transparent 0, transparent 33%, $purple 33%, $purple 66%, transparent 66%, transparent 100%);
+    background-size: 6000px 6000px;
+    animation: swipe-splash 2s ease-in-out forwards;
+    animation-delay: .1s;
+
+    @include tablet {
+      background-size: 3000px 3000px;
+    }
+
+    @include mobile {
+      background-size: 3000px 3000px;
+    }
+
+    .container {
+      padding-bottom: 0;
+    }
+
+    .container-position {
+      @include tablet {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      @include mobile {
+        padding-top: 154px;
+      }
+    }
+
+    .col-left {
+      @include tablet {
+        flex-basis: 100%;
+      }
+    }
+
+    .text-wrapper {
+      max-width: 571px;
+
+      @include tablet {
+        margin-left: 25px;
+      }
+    }
+
+    h1 {
+      position: relative;
+
+      &::after {
+        content: "Welcome to the Digital Factory Experience";
+        display: block;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(to left, $purple 0, $purple 33%, $ice-blue 33%, $ice-blue 66%, $purple 66%, $purple 100%);
+        background-size: 6000px 6000px;
+        mix-blend-mode: lighten;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        @include h1;
+        animation: swipe-splash 2.4s ease-in-out;
+
+        @include tablet {
+          background-size: 3000px 3000px;
+          font-size: 80px;
+          animation: swipe-splash 2.2s ease-in-out;
+        }
+
+        @include mobile {
+          background-size: 3000px 3000px;
+          animation: swipe-splash 2.2s ease-in-out;
+        }
+     }
+
+      @include tablet {
+        font-size: 80px;
+      }
+    }
+
+    .purple-hidden {
+      display: none;
+    }
+
+    .purple-invisible {
+      opacity: 0;
+    }
+  }
+
+  .col-left {
+    @include non-desktop {
+      order: 2;
+    }
+  }
+
+  .col-right {
+    padding-top: 25px;
+    @include transition-opacity;
+
+    @include non-desktop {
+      order: 3;
+    }
+
+    @include tablet {
+      padding-top: 15px;
+    }
+
+    p {
+      @include p;
+
+      &:first-of-type {
+        margin-bottom: 20px;
+      }
+
+      strong {
+        @include strong;
+      }
+    }
+  }
+
+  .col-full {
+    @include non-desktop {
+      order: 1;
+    }
+  }
+}
+
+@keyframes swipe-splash {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
+}

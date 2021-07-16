@@ -1,0 +1,32 @@
+$mobile: 480px;
+$tablet: 1024px;
+
+@mixin mobile {
+  @media only screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin non-mobile {
+  @media only screen and (min-width: $mobile + 1) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: $mobile + 1) and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $tablet + 1) {
+    @content;
+  }
+}
+
+@mixin non-desktop {
+  @media only screen and (max-width: $tablet) {
+    @content;
+  }
+}

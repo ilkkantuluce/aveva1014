@@ -1,0 +1,139 @@
+@keyframes pulse-before {
+  0%  { box-shadow: 0 0 0 0 rgba($purple, .4); }
+  3% { box-shadow: 0 0 0 20px rgba($purple, .4); }
+  35% { box-shadow: 0 0 0 56px rgba($purple, 0); }
+}
+
+@keyframes pulse-after {
+  15%  { box-shadow: 0 0 0 0 rgba($purple, .2); }
+  18% { box-shadow: 0 0 0 10px rgba($purple, .2); }
+  50% { box-shadow: 0 0 0 70px rgba($purple, 0); }
+}
+
+@keyframes slide-from-left {
+  0% { left: -100%; }
+  100% {
+    left: 0px;
+  }
+}
+
+.legend {
+  width: 100%;
+  background-color: rgba($white, 0.9);
+  padding: 12px 14px 18px 16px;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 110px;
+  border-left: 2px solid $purple;
+  left: -100%;
+
+  &.slide-in {
+    animation: slide-from-left 1s forwards;
+  }
+
+  .dot {
+    flex: 0 0 16px;
+    margin: 5px 15px 0 0;
+  }
+
+  .description {
+    max-width: 180px;
+  }
+}
+
+.level .legend.show-on-level {
+  max-width: 292px;
+  display: flex;
+}
+
+.pulse-dot {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid $orange;
+  display: inline-block;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+
+  &.show-dot {
+    opacity: 1;
+  }
+
+  &:hover {
+    .tooltip {
+      opacity: 1;
+    }
+  }
+
+  .tooltip {
+    background-color: rgba($white, .95);
+    box-shadow: 0 8px 16px 0 rgba($black, .1);
+    font-family: Barlow-Medium;
+    font-size: 20px;
+    color: $charcoal-gray;
+    position: absolute;
+    padding: 9px 53px 9px 20px;
+    white-space: nowrap;
+    top: -50px;
+    left: 29px;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+    z-index: 5;
+    pointer-events: none;
+
+    &::after {
+      content: " ";
+      position: absolute;
+      left: 10px;
+      bottom: -6px;
+      border-top: 7px solid $white;
+      border-right: 7px solid transparent;
+      border-left: 7px solid transparent;
+      border-bottom: none;
+    }
+  }
+
+  .dot-img {
+    box-shadow: 0 0 0 10px rgba($orange, .3);
+  }
+
+  .dot-img,
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 2s ease-in-out;
+    width: 12px;
+    height: 12px;
+    z-index: 1;
+    position: relative;
+    margin-left: 9px;
+    margin-top: 9px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    box-shadow: none;
+    animation-delay: .5s;
+  }
+
+  &::before {
+    animation-name: pulse-before;
+  }
+
+  &::after {
+    animation-name: pulse-after;
+  }
+}
