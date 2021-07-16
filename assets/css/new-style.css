@@ -719,7 +719,7 @@ body::-webkit-scrollbar {
   display: inline-block;
   cursor: pointer;
   opacity: 0;
-  transition: opacity .5s ease-in-out
+  transition: all .5s ease
 }
 
 .pulse-dot.show-dot {
@@ -727,22 +727,26 @@ body::-webkit-scrollbar {
 }
 
 .pulse-dot:hover .tooltip {
-  opacity: 1
+  top: -50px;
+  left: 0px;
+  opacity: 1;
+  transition: all .5s ease;
+
 }
 
 .pulse-dot .tooltip {
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
   font-family: Barlow-Medium;
-  font-size: 20px;
+  font-size: 18px;
   color: #363d42;
   position: absolute;
-  padding: 9px 53px 9px 20px;
+  padding: 5px 15px 5px 15px;
   white-space: nowrap;
-  top: -50px;
-  left: 29px;
+  top: -40px;
+  left: 0px;
   opacity: 0;
-  transition: opacity .5s ease-in-out;
+  transition: all .5s;
   z-index: 5;
   pointer-events: none
 }
@@ -806,18 +810,18 @@ body::-webkit-scrollbar {
 }
 
 .level-plant .chemicals .margins {
-  top: 42%;
-  left: 27%;
+  top: 16%;
+  left: -1%;
 }
 
 .level-plant .chemicals .downtime {
-  top: 28%;
-  left: 69%;
+  top: -1%;
+  left: 65%;
 }
 
 .level-plant .chemicals .agility {
-  top: 68%;
-  left: 60%;
+  top: 65%;
+  left: 45%;
 }
 
 .level .col-wrapper .col .video-wrapper .video-overlay {
@@ -851,7 +855,7 @@ body::-webkit-scrollbar {
 }
 
 .scenes-wrapper .show-on-level, .scenes-wrapper .show-on-level * {
-  transition: opacity 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .level .hide-on-level {
@@ -873,4 +877,140 @@ body::-webkit-scrollbar {
 .level.level-plant .col-left .show-on-level,
 .level.level-enterprise .col-right .show-on-level {
   display: none;
+}
+
+.sidebar-wrapper {
+  position: absolute;
+  max-width: 625px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  transition: right 1s ease-in-out;
+  transition-delay: 1s
+}
+/*
+@media only screen and (min-width: 1025px) {
+  .sidebar-wrapper {
+    overflow-x: hidden
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .sidebar-wrapper {
+    overflow: hidden
+  }
+}*/
+@media only screen and (max-width: 1024px) {
+  .sidebar-wrapper {
+    max-width: 100%;
+    left: 0;
+    position: relative
+  }
+}
+.sidebar-wrapper .sidebar {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: -200%;
+  height: 100%;
+  box-shadow: -18px 4px 16px 0 rgba(0, 0, 0, 0.1);
+  transition: right 2s ease-in-out
+}
+.sidebar-wrapper .sidebar .purple-gradient-section {
+  background-image: linear-gradient(128deg, #3e1253 7%, #5a0d87 67%);
+  padding: 22px 35px 30px;
+  position: relative
+}
+.sidebar-wrapper .sidebar .purple-gradient-section h4 {
+  font-family: Barlow-Regular;
+  font-size: 24px;
+  line-height: 32px;
+  color: #fff;
+  font-weight: normal
+}
+.sidebar-wrapper .sidebar .purple-gradient-section p {
+  font-family: Muli-Regular;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px
+}
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  .sidebar-wrapper .sidebar .purple-gradient-section {
+    padding: 43px 50px 15px
+  }
+  .sidebar-wrapper .sidebar .purple-gradient-section h4 {
+    margin-bottom: 20px
+  }
+  .sidebar-wrapper .sidebar .purple-gradient-section .white {
+    margin-bottom: 15px
+  }
+}
+@media only screen and (max-width: 480px) {
+  .sidebar-wrapper .sidebar .purple-gradient-section {
+    padding: 30px 45px 30px
+  }
+}
+.sidebar-wrapper .sidebar .purple-gradient-section .sidebar-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer
+}
+.sidebar-wrapper .sidebar .white-section {
+  background-color: rgba(255, 255, 255, 0.95);
+  height: 100%;
+  padding: 60px 75px 0 35px
+}
+@media only screen and (max-width: 1024px) {
+  .sidebar-wrapper .sidebar .white-section {
+    height: initial
+  }
+}
+.sidebar-wrapper .sidebar .white-section p {
+  font-family: Muli-Regular;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px
+}
+.sidebar-wrapper .sidebar .white-section .icon-wrapper {
+  display: flex;
+  margin-bottom: 25px
+}
+.sidebar-wrapper .sidebar .white-section .icon-wrapper .icon {
+  flex: 0 0 62px;
+  margin-right: 16px
+}
+.sidebar-wrapper .sidebar .white-section .top {
+  padding-bottom: 40px;
+  margin-bottom: 52px;
+  border-bottom: 1px solid #ddd
+}
+.sidebar-active .sidebar-wrapper {
+  z-index: 3;
+  display: block
+}
+.sidebar-active .show-sidebar {
+  right: 0
+}
+.sidebar-active .top-nav {
+  position: relative;
+  z-index: 1
+}
+@media only screen and (min-width: 1025px) {
+  .sidebar-active .top-nav {
+    background-color: #23282b
+  }
+  .sidebar-active .top-nav a {
+    color: #fff
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .sidebar-above .sidebar-wrapper {
+    overflow: visible
+  }
+}
+.sidebar-to-front {
+  z-index: 6
 }
