@@ -20,12 +20,13 @@ $(document).ready(function() {
 
     $('.industry.level-plant .chemicals .col-left .hide-on-level').animate({top: '100px', opacity: '0'}, 'slow');
     $('.industry.level-enterprise .chemicals .col-right .hide-on-level').animate({top: '100px', opacity: '0'}, 'slow');
-    //$('.industry .chemicals .col-left  .hide-on-level').animate({display: 'none'}, 'slow');
     
     $('.industry .fade').fadeOut();
 
 
-    $('.scenes-wrapper .title-wrapper.show-on-level div').css({'animation-name': 'show-on-level', 'animation-duration': '1s', 'opacity': '1'});
+    $('.scenes-wrapper .title-wrapper.show-on-level div').css({'animation-name': 'show-on-level', 'top': '-20%', 'left': '-15%', 'animation-duration': '1s', 'opacity': '1'});
+
+
 
 
     setTimeout(function() {
@@ -43,17 +44,13 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-
-
     }, 500);
 
     setTimeout(function() {
       $('.pulse-dot').addClass('show-dot');
       $('.show-on-level').addClass('fade-in');
+
+      $('.legend').css({'left': '-15%', 'transition': '1s'});
     }, 3000);
   });
 
