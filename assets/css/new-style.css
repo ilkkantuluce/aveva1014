@@ -652,15 +652,18 @@ body::-webkit-scrollbar {
 }
 
 .industry.level-enterprise .chemicals .col-left .video-wrapper {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
+  position: relative;
 }
 
 .industry.level-enterprise .chemicals .col-left .video {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
   -webkit-animation-name: make-bigger2;

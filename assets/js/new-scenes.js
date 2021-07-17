@@ -42,16 +42,29 @@ $(document).ready(function() {
       $('.level-plant .hide-on-level').css('flex-basis', '50%');
       $('.level-button-plant').hide();
       $('.level.level-plant .col-enterprise').hide();
-      $('.level.level-enterprise .col-plant').hide();
     }, 500);
 
 
-    $('.level-enterprise .box-wrapper').css('display', 'flex');
+    $('.industry .chemicals .col-left .video-wrapper').animate({left: '100%', top: '0px'}, '500');
+
+    //$('.col-wrapper .col .video-wrapper').css('left', '100%');
+
+   
+
+
+    setTimeout(function() {
+
+    $('.industry .chemicals .col-left .video-wrapper').css({'left': '0px', 'top': '0px', 'transition': '0s'});
+
+
+    $('.level.level-enterprise .col-plant').hide();
+
+      $('.level-enterprise .box-wrapper').css('display', 'flex');
     $('.level-enterprise .col-wrapper .col').css('flex-basis', '100%');
     $('.level-enterprise .title-wrapper').css('flex-basis', '50%');
     $('.level-enterprise .hide-on-level').css('flex-basis', '50%');
-    $('.level-button-enterprise').hide();
-
+    $('.level-enterprise .level-button-enterprise').hide();
+    }, 3600);
 
 
 
