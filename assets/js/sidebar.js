@@ -2,7 +2,6 @@ $(document).ready(function() {
   $('.pulse-dot').on('click', function() {
     var sidebar = $(this).data('sidebar');
 
-    $("html, body").animate({ scrollTop: 0 }, "slow");
 
     // start scale
     $('.industry').addClass('level-scale-up');
@@ -10,12 +9,20 @@ $(document).ready(function() {
     // move left
     $('.industry').addClass('level-move-left');
 
-    $('.video-wrapper').animate({left: '-130%'}, 'fast');
-    $('.scenes-wrapper .title-wrapper.show-on-level div').animate({left: '-75%'}, 'fast');
-    $('.level .legend.show-on-level').animate({left: '-75%'}, 'fast');
 
-    $('.sidebar-wrapper').css('z-index', '4');
+    if($(window).width() > 800){
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      $('.video-wrapper').css('transform', 'translate(-130%, 0px)');
+      $('.scenes-wrapper .title-wrapper.show-on-level div').css({'left': '-75%'});
+      $('.level .legend.show-on-level').css({'left': '-75%'});
+      $('.sidebar-wrapper').css('z-index', '4');
+    }
 
+    //Tablet
+    if($(window).width() < 800){
+     
+
+    } 
     
 
     // open sidebar
@@ -30,16 +37,24 @@ $(document).ready(function() {
 
   $('.sidebar-close').on('click', function() {
 
+
+
+    if($(window).width() > 800){
+      $('.video-wrapper').css('transform', 'translate(0%, 0px)');
+      $('.scenes-wrapper .title-wrapper.show-on-level div').css({'left': '-15%'});
+      $('.level .legend.show-on-level').css({'left': '-15%'});
+      $('.sidebar-wrapper').css('z-index', '4');
+      setTimeout(function() {
+        $('.sidebar-wrapper').css('z-index', '-1');
+      }, 800);
+    }
+
+    //Tablet
+    if($(window).width() < 800){
+     
+
+    } 
     
-    $('.video-wrapper').animate({left: '0%'});
-    $('.scenes-wrapper .title-wrapper.show-on-level div').animate({left: '-15%'});
-    $('.level .legend.show-on-level').animate({left: '-15%'});
-
-    $('.sidebar-wrapper').css('z-index', '4');
-
-    setTimeout(function() {
-      $('.sidebar-wrapper').css('z-index', '-1');
-    }, 800);
 
 
     // push video back
