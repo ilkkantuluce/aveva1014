@@ -10,10 +10,11 @@ $(document).ready(function() {
     // move left
     $('.industry').addClass('level-move-left');
 
-    $('.video-wrapper').animate({left: '-130%'});
-    $('.scenes-wrapper .title-wrapper.show-on-level div').animate({left: '-75%'});
-    $('.level .legend.show-on-level').animate({left: '-75%'});
+    $('.video-wrapper').animate({left: '-130%'}, 'fast');
+    $('.scenes-wrapper .title-wrapper.show-on-level div').animate({left: '-75%'}, 'fast');
+    $('.level .legend.show-on-level').animate({left: '-75%'}, 'fast');
 
+    $('.sidebar-wrapper').css('z-index', '4');
 
     
 
@@ -34,6 +35,11 @@ $(document).ready(function() {
     $('.scenes-wrapper .title-wrapper.show-on-level div').animate({left: '-15%'});
     $('.level .legend.show-on-level').animate({left: '-15%'});
 
+    $('.sidebar-wrapper').css('z-index', '4');
+
+    setTimeout(function() {
+      $('.sidebar-wrapper').css('z-index', '-1');
+    }, 800);
 
 
     // push video back
