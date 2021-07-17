@@ -26,7 +26,7 @@ $(document).ready(function() {
     $('.industry .fade').fadeOut();
 
 
-    $('.scenes-wrapper .title-wrapper.show-on-level div').css({'animation-name': 'show-on-level', 'top': '-20%', 'left': '-15%', 'animation-duration': '1s', 'opacity': '1'});
+    $('.level-plant .scenes-wrapper .title-wrapper.show-on-level div').css({'animation-name': 'show-on-level', 'top': '-20%', 'left': '-15%', 'animation-duration': '1s', 'opacity': '1'});
 
 
 
@@ -45,7 +45,7 @@ $(document).ready(function() {
     }, 500);
 
 
-    $('.industry .chemicals .col-left .video-wrapper').animate({left: '100%', top: '0px'}, '500');
+    $('.industry .chemicals .col-left .hide-on-level').animate({left: '100%'}, 1000);
 
     //$('.col-wrapper .col .video-wrapper').css('left', '100%');
 
@@ -53,19 +53,20 @@ $(document).ready(function() {
 
 
     setTimeout(function() {
+      $('.industry .chemicals .col-left .hide-on-level').css({'left': '0px', 'top': '0px', 'transition': '0s'});
 
-    $('.industry .chemicals .col-left .video-wrapper').css({'left': '0px', 'top': '0px', 'transition': '0s'});
-
-
-    $('.level.level-enterprise .col-plant').hide();
+      $('.level.level-enterprise .col-plant').hide();
 
       $('.level-enterprise .box-wrapper').css('display', 'flex');
-    $('.level-enterprise .col-wrapper .col').css('flex-basis', '100%');
-    $('.level-enterprise .title-wrapper').css('flex-basis', '50%');
-    $('.level-enterprise .hide-on-level').css('flex-basis', '50%');
-    $('.level-enterprise .level-button-enterprise').hide();
+      $('.level-enterprise .col-wrapper .col').css('flex-basis', '100%');
+      $('.level-enterprise .title-wrapper').css('flex-basis', '50%');
+      $('.level-enterprise .hide-on-level').css('flex-basis', '50%');
+      $('.level-enterprise .level-button-enterprise').hide();
     }, 3600);
 
+    setTimeout(function() {
+      $('.level-enterprise .scenes-wrapper .title-wrapper.show-on-level div').css({'animation-name': 'show-on-level', 'top': '-20%', 'left': '-15%', 'animation-duration': '1s', 'opacity': '1'});
+    }, 800);
 
 
     setTimeout(function() {
