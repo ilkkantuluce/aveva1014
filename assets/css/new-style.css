@@ -493,7 +493,7 @@ body::-webkit-scrollbar {
 
 @media only screen and (min-width: 481px) {
   .scenes-wrapper .col {
-    min-height: 408px
+    min-height: 450px
   }
 }
 
@@ -592,11 +592,9 @@ body::-webkit-scrollbar {
 @keyframes make-bigger2 {
   0% {
     transform: translate(-5px, 50px) scale(1.6);
-    opacity: 0;
   }
   100% {
     transform: translate(-5px, 50px) scale(3.4);
-    opacity: 1;
   }
 }
 
@@ -1200,5 +1198,90 @@ body::-webkit-scrollbar {
 
   .legend {
     top: 18%;
+  }
+}
+
+.pull-up {
+  -webkit-animation: pull-up 1.5s forwards;
+  animation: pull-up 1.5s forwards;
+  opacity: 0
+}
+
+.pull-up.scenes-wrapper .button {
+  opacity: 0;
+  -webkit-animation: pull-up-button 1.5s forwards;
+  animation: pull-up-button 1.5s forwards;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s
+}
+
+.pull-up:nth-child(2) {
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s
+}
+
+.pull-up:last-child {
+  -webkit-animation-delay: .6s;
+  animation-delay: .6s
+}
+
+.fade.out {
+  -webkit-animation: fade 1s forwards;
+  animation: fade 1s forwards
+}
+
+@-webkit-keyframes pull-up {
+  0% {
+    padding-top: 50px;
+    opacity: 0
+  }
+  50% {
+    padding-top: 0
+  }
+  100% {
+    padding-top: 0;
+    opacity: 1
+  }
+}
+
+@keyframes pull-up {
+  0% {
+    padding-top: 50px;
+    opacity: 0
+  }
+  50% {
+    padding-top: 0
+  }
+  100% {
+    padding-top: 0;
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes pull-up-button {
+  0% {
+    margin-top: 50px;
+    opacity: 0
+  }
+  50% {
+    margin-top: 0
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1
+  }
+}
+
+@keyframes pull-up-button {
+  0% {
+    margin-top: 50px;
+    opacity: 0
+  }
+  50% {
+    margin-top: 0
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1
   }
 }
