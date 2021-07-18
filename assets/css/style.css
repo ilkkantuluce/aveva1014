@@ -464,9 +464,6 @@ body::-webkit-scrollbar {
 
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
   .splash.purple .container-position {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%)
   }
 }
 
@@ -484,12 +481,6 @@ body::-webkit-scrollbar {
 
 .splash.purple .text-wrapper {
   max-width: 571px
-}
-
-@media only screen and (min-width: 481px) and (max-width: 1024px) {
-  .splash.purple .text-wrapper {
-    margin-left: 25px
-  }
 }
 
 .splash.purple h1 {
@@ -538,22 +529,16 @@ body::-webkit-scrollbar {
   .splash.purple h1::after {
     background-size: 3000px 3000px;
     font-size: 80px;
-    -webkit-animation: swipe-splash 2.2s ease-in-out;
-    animation: swipe-splash 2.2s ease-in-out
+    -webkit-animation: swipe-splash 2.4s ease-in-out;
+    animation: swipe-splash 2.4s ease-in-out
   }
 }
 
 @media only screen and (max-width: 480px) {
   .splash.purple h1::after {
     background-size: 3000px 3000px;
-    -webkit-animation: swipe-splash 2.2s ease-in-out;
-    animation: swipe-splash 2.2s ease-in-out
-  }
-}
-
-@media only screen and (min-width: 481px) and (max-width: 1024px) {
-  .splash.purple h1 {
-    font-size: 80px
+    -webkit-animation: swipe-splash 2.4s ease-in-out;
+    animation: swipe-splash 2.4s ease-in-out
   }
 }
 
@@ -2557,6 +2542,7 @@ body::-webkit-scrollbar {
   top: -100%;
   z-index: 0;
   padding-top: 50px;
+  position: relative;
 }
 
 .slider.purple .nav.title-nav {
@@ -2592,4 +2578,16 @@ body::-webkit-scrollbar {
 
 .power .bg {
   background-image: url(../images/power.png)
+}
+
+@media screen and (max-width: 800px) {
+  .splash.purple h1 {
+    font-size: 51px;
+    width: 284px;
+  }
+
+  .splash.purple h1::after {
+    font-size: 51px;
+    width: 284px;
+  }
 }

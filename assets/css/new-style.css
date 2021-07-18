@@ -178,10 +178,14 @@ body {
   overflow: hidden;
 }
 
-/*
-body::-webkit-scrollbar {
-  display: none
-}*/
+@media screen and (max-width: 800px) {
+  body {
+    overflow-y: scroll;
+  }
+  html {
+    overflow: unset;
+  }
+}
 
 .container {
   max-width: 1110px;
@@ -607,6 +611,11 @@ body::-webkit-scrollbar {
     opacity: 1;
     transform: translate(0px, 0px) scale(1);
   }
+}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 100%;}
 }
 
 .industry:not(.level) .video {
