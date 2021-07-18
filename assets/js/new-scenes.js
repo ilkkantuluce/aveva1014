@@ -33,6 +33,12 @@ $(document).ready(function() {
     $('.industry.level-enterprise .chemicals .col-right .hide-on-level').animate({top: '100px', opacity: '0'}, 'slow');
     
 
+    
+    setTimeout(function() {
+      $('.level-enterprise .level-button-enterprise').fadeOut();
+      $('.level-plant .level-button-plant').fadeOut();
+    }, 800);
+
     //Desktop
     if($(window).width() > 800){
       
@@ -70,7 +76,6 @@ $(document).ready(function() {
         $('.level-enterprise .col-wrapper .col').css('flex-basis', '100%');
         $('.level-enterprise .title-wrapper').css('flex-basis', '50%');
         $('.level-enterprise .hide-on-level').css('flex-basis', '50%');
-        $('.level-enterprise .level-button-enterprise').hide();
       }, 3600);
   
       setTimeout(function() {
@@ -87,20 +92,23 @@ $(document).ready(function() {
 
       $('.level .scenes-wrapper .title-wrapper.show-on-level div').css({'animation-name': 'show-on-level', 'top': '-20%', 'left': '-15%', 'animation-duration': '1s', 'opacity': '1'});
 
+
+      $('.industry.level-plant .chemicals .col-left .hide-on-level').animate({top: '100px', opacity: '0'}, 'slow');
+      $('.industry.level-enterprise .chemicals .col-right .hide-on-level').animate({top: '100px', opacity: '0'}, 'slow');
+      
+
+
       setTimeout(function() {
         $('.legend').css({'left': '0%', 'transition': '1s'});
       }, 2000);
 
     } 
-
     
   });
 
 
   $('.industry.level-plant .chemicals .col-left .hide-on-level').fadeOut();
   $('.industry.level-enterprise .chemicals .col-right .hide-on-level').fadeOut();
-   
-
 
 
 });

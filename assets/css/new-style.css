@@ -162,14 +162,6 @@ html {
   overflow-x: hidden
 }
 
-@media only screen and (max-width: 1024px) {
-  html {
-    overflow-x: hidden
-  }
-  body {
-    overflow-x: hidden;
-  }
-}
 
 body {
   min-height: 100%;
@@ -182,7 +174,8 @@ body {
   font-family: Barlow-Light;
   background-color: #f2f5f7;
   -ms-overflow-style: none;
-  scrollbar-width: none
+  scrollbar-width: none;
+  overflow: hidden;
 }
 
 /*
@@ -525,7 +518,8 @@ body::-webkit-scrollbar {
 
 @media only screen and (max-width: 480px) {
   .scenes-wrapper .col.col-left {
-    margin-bottom: 96px
+    margin-bottom: 140px;
+    margin-top: 50px;
   }
 }
 
@@ -1074,10 +1068,11 @@ body::-webkit-scrollbar {
   max-width: 100%;
 }
 
+
+/* Tablet */
 @media screen and (max-width: 800px){
   @keyframes make-bigger {
     0% {
-      transform: translate(-5px, 50px) scale(1.25);
     }
     100% {
       transform: translate(-5px, 250px) scale(2.5);
@@ -1086,13 +1081,16 @@ body::-webkit-scrollbar {
 
   @keyframes make-bigger2 {
     0% {
-      transform: translate(-5px, 50px) scale(1.6);
     }
     100% {
-      transform: translate(-5px, 300px) scale(3.6);
+      transform: translate(-5px, 250px) scale(3.6);
     }
   }
   
+  .scenes-wrapper {
+    margin-top: 0px;
+  }
+
   .video-wrapper {
     transform: scale(1);
   }
@@ -1136,4 +1134,63 @@ body::-webkit-scrollbar {
     margin-top: 190px;
   }
 
+}
+
+@media screen and (max-width: 790px){
+  .pull-up.scenes-wrapper .button {
+    bottom: 5%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .pull-up.scenes-wrapper .button {
+    bottom: 15%;
+  }
+}
+
+@media screen and (max-width: 521px){
+  .level .scenes-wrapper .col {
+    margin-left: 0px;
+  }
+
+  .level.level-plant .scenes-wrapper .col.col-right .box-wrapper {
+    transform: translate(0%, 0px);
+  }
+
+  .level.level-enterprise .scenes-wrapper .col.col-left .box-wrapper {
+    transform: translate(0%, 0px);
+  }
+}
+
+@media screen and (max-width: 477px){
+  @keyframes make-bigger {
+    0% {
+    }
+    100% {
+      transform: translate(-5px, 250px) scale(2.0);
+    }
+  }
+
+  @keyframes make-bigger2 {
+    0% {
+    }
+    100% {
+      transform: translate(-5px, 300px) scale(3.0);
+    }
+  }
+
+  .pull-up.scenes-wrapper .button {
+    bottom: -50%;
+  }
+
+  .level .scenes-wrapper .title-wrapper.show-on-level div {
+    top: 0px !important;
+    min-width: 100%;
+    left: 0% !important;
+  }
+
+  .legend {
+    top: 18%;
+  }
+  
 }
