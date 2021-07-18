@@ -5,7 +5,8 @@ $(document).ready(function() {
 
   setTimeout(function() {
     $('.splash.purple').removeClass('purple');
-  }, 2000);
+    $('.purple-invisible').animate({opacity: '1'}, 'slow');
+    }, 2200);
 
   $('.splash .title-nav .nav-link').on('click', function(e) {
     e.preventDefault();
