@@ -44,7 +44,7 @@ $(document).ready(function() {
       
 
   
-      $('.level-plant .scenes-wrapper .title-wrapper.show-on-level div').css({'animation-name': 'show-on-level', 'top': '-20%', 'left': '0%', 'animation-duration': '1s', 'opacity': '1'});
+      $('.level-plant .scenes-wrapper .title-wrapper.show-on-level div').css({'animation-name': 'show-on-level', 'top': '-20%', 'left': '-15%', 'animation-duration': '1s', 'opacity': '1'});
   
   
       setTimeout(function() {
@@ -79,7 +79,7 @@ $(document).ready(function() {
       }, 3600);
   
       setTimeout(function() {
-        $('.level-enterprise .scenes-wrapper .title-wrapper.show-on-level div').css({'animation-name': 'show-on-level', 'top': '-20%', 'left': '0%', 'animation-duration': '1s', 'opacity': '1'});
+        $('.level-enterprise .scenes-wrapper .title-wrapper.show-on-level div').css({'animation-name': 'show-on-level', 'top': '-20%', 'left': '-15%', 'animation-duration': '1s', 'opacity': '1'});
       }, 800);
 
     }
@@ -112,6 +112,9 @@ $(document).ready(function() {
 
 
 });
+
+
+$(window).resize(function(){location.reload();});
 
 
 function reloadCss() {
