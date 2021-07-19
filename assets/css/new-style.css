@@ -1099,6 +1099,28 @@ body {
     margin-top: 390px;
   }
 
+  .scenes-wrapper p.scenes-label {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+   .container.container-center {
+    overflow: hidden;
+  }
+
+  .level .scenes-wrapper .col {
+    margin-bottom: 65%;
+  }
+
+  .pulse-dot-reverse-mobile.pulse-dot:hover .tooltip {
+    left: -125px;
+  }
+
+  .pulse-dot-reverse-mobile.pulse-dot .tooltip::after {
+    left: 132px;
+  }
+  
+
 }
 
 @media screen and (max-width: 790px){
@@ -1136,6 +1158,10 @@ body {
     100% {
       transform: translate(-5px, 530px) scale(3.0);
     }
+  }
+
+  .scenes-wrapper .show-on-level.title-wrapper p {
+    text-align: left;
   }
 
   .pull-up.scenes-wrapper .button {
