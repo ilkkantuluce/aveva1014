@@ -17,7 +17,15 @@ body {font-family:Barlow-Light, Arial, Helvetica, sans-serif;}
 .button, .nav-link {font-family:Barlow-SemiBold, Arial, Helvetica, sans-serif;}
 .splash.purple * {transition:none!important;}
 
-.pop-trigger {display: block; }
+.pop-trigger {display: block;}
+
+.sidebar .pop-trigger {
+  margin-bottom: 25px;
+}
+
+.sidebar-wrapper .sidebar .white-section .sidebar-video-wrapper p {
+  margin-bottom: 25px;
+}
 .pop-trigger>img {display: block;cursor: pointer;max-width: 100%;height: auto;}
 .fitb-pop {position: fixed;top: 50%;left: 50%;width: 101vw;height: 101vh;-webkit-transform: translate(-50%, -10%);background: rgba(0,0,0,.75);z-index: 999999;padding: 40px;display: flex;flex-direction: column;align-items: center;display: none;}
 .sidebar .fitb-pop {-webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
