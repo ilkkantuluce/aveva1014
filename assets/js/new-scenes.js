@@ -54,8 +54,6 @@ $(document).ready(function() {
 
       $('.level-plant .scenes-wrapper .title-wrapper.show-on-level div').css({'animation-name': 'show-on-level', 'top': '-20%', 'left': '-15%', 'animation-duration': '1s', 'opacity': '1'});
 
-
-
       setTimeout(function() {
         $('.legend').css({'left': '-15%', 'transition': '1s'});
       }, 2000);
@@ -69,15 +67,11 @@ $(document).ready(function() {
         $('.level.level-plant .col-enterprise').hide();
       }, 500);
 
-
       $('.industry .chemicals .col-left .hide-on-level').css({'animation': 'mymove 2s', 'animation-delay': '0.3s', 'animation-fill-mode': 'forwards'});
-
 
       setTimeout(function() {
         $('.industry .chemicals .col-left .hide-on-level').css({'animation': '0s', 'left': '0px', 'top': '0px', 'transition': '0s'});
-
         $('.level.level-enterprise .col-plant').hide();
-
         $('.level-enterprise .box-wrapper').css('display', 'flex');
         $('.level-enterprise .col-wrapper .col').css('flex-basis', '100%');
         $('.level-enterprise .title-wrapper').css('flex-basis', '50%');
@@ -89,7 +83,6 @@ $(document).ready(function() {
       }, 800);
 
     }
-
 
     //Tablet
     if($(window).width() < 1000){
@@ -118,7 +111,75 @@ $(document).ready(function() {
     }
 
 
+
+
+    //When resize browser
     $(window).resize(function() {
+
+      if($(window).width() > 800){
+        console.log($('.main-title-wrapper.fade').height());
+        $('.nav.top-nav').css({'margin-bottom': $('.main-title-wrapper.fade').height() + 60});
+      }
+      //Desktop
+      if($(window).width() > 1000){
+
+        $('.level-plant .scenes-wrapper .title-wrapper.show-on-level div').css({'animation-name': 'show-on-level', 'top': '-20%', 'left': '-15%', 'animation-duration': '1s', 'opacity': '1'});
+
+        setTimeout(function() {
+          $('.legend').css({'left': '-15%', 'transition': '1s'});
+        }, 2000);
+
+        setTimeout(function() {
+          $('.level-plant .box-wrapper').css('display', 'flex');
+          $('.level-plant .col-wrapper .col').css('flex-basis', '100%');
+          $('.level-plant .title-wrapper').css('flex-basis', '50%');
+          $('.level-plant .hide-on-level').css('flex-basis', '50%');
+          $('.level-button-plant').hide();
+          $('.level.level-plant .col-enterprise').hide();
+        }, 500);
+
+        $('.industry .chemicals .col-left .hide-on-level').css({'animation': 'mymove 2s', 'animation-delay': '0.3s', 'animation-fill-mode': 'forwards'});
+
+        setTimeout(function() {
+          $('.industry .chemicals .col-left .hide-on-level').css({'animation': '0s', 'left': '0px', 'top': '0px', 'transition': '0s'});
+          $('.level.level-enterprise .col-plant').hide();
+          $('.level-enterprise .box-wrapper').css('display', 'flex');
+          $('.level-enterprise .col-wrapper .col').css('flex-basis', '100%');
+          $('.level-enterprise .title-wrapper').css('flex-basis', '50%');
+          $('.level-enterprise .hide-on-level').css('flex-basis', '50%');
+        }, 5600);
+
+        setTimeout(function() {
+          $('.level-enterprise .scenes-wrapper .title-wrapper.show-on-level div').css({'animation-name': 'show-on-level', 'top': '-20%', 'left': '-15%', 'animation-duration': '1s', 'opacity': '1'});
+        }, 800);
+
+      }
+
+      //Tablet
+      if($(window).width() < 1000){
+
+        $('.level-enterprise .level-button-enterprise').fadeOut();
+        $('.level-plant .level-button-plant').fadeOut();
+
+        $('.level .scenes-wrapper .title-wrapper.show-on-level div').css({'animation-name': 'show-on-level', 'top': '-20%', 'left': '-15%', 'animation-duration': '1s', 'opacity': '1'});
+
+        $('.industry.level-plant .chemicals .col-left .hide-on-level').animate({top: '100px', opacity: '0'}, 'slow');
+        $('.industry.level-enterprise .chemicals .col-right .hide-on-level').animate({top: '100px', opacity: '0'}, 'slow');
+
+        //$('.level-plant .chemicals .col-right .hide-on-level').css({'margin-top': '-100px'});
+
+
+        setTimeout(function() {
+          $('.legend').css({'left': '0%', 'transition': '1s'});
+        }, 2000);
+
+      }
+
+
+      if($(window).width() < 450){
+        $('.level.level-plant .col-enterprise').hide();
+        $('.level.level-enterprise .col-plant').hide();
+      }
 
 
     });
