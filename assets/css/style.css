@@ -488,7 +488,7 @@ body::-webkit-scrollbar {
 }
 
 .splash.purple h1::after {
-  content: "Welcome to the Digital Factory Experience";
+  content: "Shaping a Sustainable Future for Industries";
   display: block;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
