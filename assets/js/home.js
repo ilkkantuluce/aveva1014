@@ -12,6 +12,7 @@ $(document).ready(function() {
 
     $('.splash-inner').fadeOut('fast');
     $('.bg').animate({opacity: '0'}, 'slow');
+    $('.bg').css({'opacity': '0'});
     
     setTimeout(function() {
       $('.bg').animate({opacity: '1'}, 'slow');

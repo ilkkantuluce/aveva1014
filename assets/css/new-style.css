@@ -958,7 +958,7 @@ body {
   }
 }*/
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1000px) {
   .sidebar-wrapper {
     max-width: 100%;
     left: 0;
@@ -1116,7 +1116,7 @@ body {
 
 
 /* Tablet */
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1000px){
   @keyframes make-bigger {
     0% {
     }

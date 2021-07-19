@@ -10,7 +10,7 @@ $(document).ready(function() {
     $('.industry').addClass('level-move-left');
 
 
-    if($(window).width() > 800){
+    if($(window).width() > 1000){
       $("html, body").animate({ scrollTop: 0 }, "slow");
       $('.video-wrapper').css('transform', 'translate(-130%, -100px)');
       $('.scenes-wrapper .title-wrapper.show-on-level div').css({'left': '-75%'});
@@ -19,7 +19,7 @@ $(document).ready(function() {
     }
 
     //Tablet
-    if($(window).width() < 800){
+    if($(window).width() < 1000){
      
 
     } 
@@ -39,7 +39,7 @@ $(document).ready(function() {
 
 
 
-    if($(window).width() > 800){
+    if($(window).width() > 1000){
       $('.video-wrapper').css('transform', 'translate(0%, 0px)');
       $('.scenes-wrapper .title-wrapper.show-on-level div').css({'left': '-15%'});
       $('.level .legend.show-on-level').css({'left': '-15%'});
@@ -50,7 +50,7 @@ $(document).ready(function() {
     }
 
     //Tablet
-    if($(window).width() < 800){
+    if($(window).width() < 1000){
      
 
     } 

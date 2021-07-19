@@ -50,7 +50,7 @@ $(document).ready(function() {
 
 
     //Desktop
-    if($(window).width() > 800){
+    if($(window).width() > 1000){
 
       $('.level-plant .scenes-wrapper .title-wrapper.show-on-level div').css({'animation-name': 'show-on-level', 'top': '-20%', 'left': '-15%', 'animation-duration': '1s', 'opacity': '1'});
 
@@ -92,7 +92,7 @@ $(document).ready(function() {
 
 
     //Tablet
-    if($(window).width() < 800){
+    if($(window).width() < 1000){
 
       $('.level .scenes-wrapper .title-wrapper.show-on-level div').css({'animation-name': 'show-on-level', 'top': '-20%', 'left': '-15%', 'animation-duration': '1s', 'opacity': '1'});
 

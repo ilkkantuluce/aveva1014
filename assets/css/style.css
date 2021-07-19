@@ -2564,6 +2564,10 @@ body::-webkit-scrollbar {
   width: 100%;
 }
 
+.purple .bg {
+  opacity: 0 !important;
+}
+
 .chemicals .bg {
   background-image: url(../images/chemicals.png)
 }
