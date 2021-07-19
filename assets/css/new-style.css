@@ -1121,7 +1121,7 @@ body {
     0% {
     }
     100% {
-      transform: translate(-5px, 250px) scale(2.5);
+      transform: translate(-5px, 350px) scale(2.5);
     }
   }
 
@@ -1129,7 +1129,7 @@ body {
     0% {
     }
     100% {
-      transform: translate(-5px, 250px) scale(3.6);
+      transform: translate(-5px, 350px) scale(3.6);
     }
   }
 
@@ -1182,21 +1182,17 @@ body {
     transform: translate(50%, 0px);
   }
 
-  .level .scenes-wrapper .title-wrapper.show-on-level div {
-    position: relative;
-  }
-
   .legend {
     top: 25%;
     bottom: unset;
   }
 
   .level .scenes-wrapper .col {
-    margin-bottom: 500px;
+    margin-bottom: 280px;
   }
 
   .level .col-wrapper .col .video-wrapper .video-overlay {
-    margin-top: 190px;
+    margin-top: 290px;
   }
 
 }
@@ -1229,7 +1225,7 @@ body {
     0% {
     }
     100% {
-      transform: translate(-5px, 250px) scale(2.0);
+      transform: translate(-5px, 350px) scale(2.0);
     }
   }
 
@@ -1237,7 +1233,7 @@ body {
     0% {
     }
     100% {
-      transform: translate(-5px, 300px) scale(3.0);
+      transform: translate(-5px, 350px) scale(3.0);
     }
   }
 

@@ -94,10 +94,16 @@ $(document).ready(function() {
     //Tablet
     if($(window).width() < 1000){
 
+      $('.level-enterprise .level-button-enterprise').fadeOut();
+      $('.level-plant .level-button-plant').fadeOut();
+
       $('.level .scenes-wrapper .title-wrapper.show-on-level div').css({'animation-name': 'show-on-level', 'top': '-20%', 'left': '-15%', 'animation-duration': '1s', 'opacity': '1'});
 
       $('.industry.level-plant .chemicals .col-left .hide-on-level').animate({top: '100px', opacity: '0'}, 'slow');
       $('.industry.level-enterprise .chemicals .col-right .hide-on-level').animate({top: '100px', opacity: '0'}, 'slow');
+
+      //$('.level-plant .chemicals .col-right .hide-on-level').css({'margin-top': '-100px'});
+
 
       setTimeout(function() {
         $('.legend').css({'left': '0%', 'transition': '1s'});
