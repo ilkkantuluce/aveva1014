@@ -51,7 +51,7 @@ $(document).ready(function() {
 
   $(document).on('click', '.title-nav .nav-link', function(e) {
     e.preventDefault();
-
+    $('.background-video').fadeOut();
     var item = $(this).data('slide');
     $('.slide').fadeOut('fast').removeClass('slide-active');
 

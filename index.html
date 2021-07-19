@@ -222,9 +222,30 @@
       </div>
 
     </div>
+
+    <video muted playsinline class="background-video" style="display:none;">
+      <source src="assets/videos/AVEVA_intro_intro.webm" type="video/webm">
+    </video>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="assets/js/slider.js"></script>
     <script src="assets/js/la-custom.js"></script>
     <script src="assets/js/home.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+      let vidElem = document.querySelector('.background-video');
+      let videoElement = $('.background-video');
+      setTimeout(function() {
+        videoElement.fadeIn(400, 'swing', function() {
+          vidElem.play();
+        });
+      }, 2000);
+      vidElem.addEventListener('timeupdate', function () {
+if (vidElem.currentTime >= 15) {
+        vidElem.currentTime = 11.25;
+        vidElem.play();
+      }
+}, false);
+    });
+    </script>
   </body>
 </html>

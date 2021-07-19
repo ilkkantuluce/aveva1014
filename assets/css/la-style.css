@@ -24,6 +24,8 @@ body {font-family:Barlow-Light, Arial, Helvetica, sans-serif;}
 .active .fitb-pop {display: flex; }
 .fitb-pop>div {margin: auto 0; width: 100%; max-width: 750px; padding: 0!important; height: 422px; max-height: calc( ( 100vw - 80px ) * .5625 ); }
 
+.background-video {position: absolute; z-index: -1; bottom: 0; width: 100%; height: auto; }
+
 @-webkit-keyframes pulse-before{
   0%{box-shadow:0 0 0 0 rgba(245,166,36,0.4)}
   3%{box-shadow:0 0 0 20px rgba(245,166,36,0.4)}
