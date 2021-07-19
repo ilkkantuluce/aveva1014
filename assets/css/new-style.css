@@ -595,7 +595,7 @@ body {
 
 @keyframes make-bigger2 {
   0% {
-    transform: translate(-5px, 50px) scale(1.6);
+    transform: translate(var(--moveLeft), var(--moveDown)) scale(var(--scaleAmount));
   }
   100% {
     transform: translate(-5px, 50px) scale(3.4);
@@ -1102,7 +1102,7 @@ body {
       transform: translate(-5px, 250px) scale(3.6);
     }
   }
-  
+
   .scenes-wrapper {
     margin-top: 0px;
   }
@@ -1110,11 +1110,11 @@ body {
   .video-wrapper {
     transform: scale(1);
   }
-  
+
   .scenes-wrapper .col .box-wrapper {
     flex-direction: column;
   }
-  
+
   .level .scenes-wrapper .title-wrapper.show-on-level div {
     top: 0px !important;
     min-width: 200%;
