@@ -394,7 +394,7 @@ body::-webkit-scrollbar {
 }
 
 .nav .nav-item .nav-link.active {
-  color: #78a1fc
+  color: #4D5EE0;
 }
 
 .splash {
@@ -2605,7 +2605,7 @@ body::-webkit-scrollbar {
   .nav.title-nav {
     padding: 92px 0 92px;
   }
-  
+
 }
 
 @media screen and (max-width: 480px){
