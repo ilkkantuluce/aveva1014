@@ -656,7 +656,7 @@ body {
 
 .pulse-dot:hover .tooltip {
   top: -50px;
-  left: 0px;
+  left: -2px;
   opacity: 1;
   transition: all .5s ease;
   transform: scale(1);
