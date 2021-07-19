@@ -20,7 +20,7 @@ body {font-family:Barlow-Light, Arial, Helvetica, sans-serif;}
 .pop-trigger {display: block; }
 .pop-trigger>img {display: block;cursor: pointer;max-width: 100%;height: auto;}
 .fitb-pop {position: fixed;top: 50%;left: 50%;width: 101vw;height: 101vh;-webkit-transform: translate(-50%, -10%);background: rgba(0,0,0,.75);z-index: 999999;padding: 40px;display: flex;flex-direction: column;align-items: center;display: none;}
-
+.sidebar .fitb-pop {-webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 .active .fitb-pop {display: flex; }
 .fitb-pop>div {margin: auto 0; width: 100%; max-width: 750px; padding: 0!important; height: 422px; max-height: calc( ( 100vw - 80px ) * .5625 ); }
 
