@@ -106,6 +106,12 @@ $(document).ready(function() {
     }
 
 
+    if($(window).width() < 450){
+      $('.level.level-plant .col-enterprise').hide();
+      $('.level.level-enterprise .col-plant').hide();
+    }
+
+
     $(window).resize(function() {
 
 

@@ -297,7 +297,7 @@ body {
   margin-bottom: 100px;
 }
 
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 281px) {
   .col-wrapper .col {
     flex-basis: 50%
   }
@@ -1026,7 +1026,7 @@ body {
 .sidebar-wrapper .sidebar .white-section {
   background-color: rgba(255, 255, 255, 0.95);
   height: 100%;
-  padding: 60px 75px 0 35px
+  padding: 60px 75px 60px 75px
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1133,31 +1133,16 @@ body {
     }
   }
 
-  .container.container-center {
-    overflow: hidden;
-  }
-
   .sidebar-wrapper {
-    height: 0px;
-    position: absolute;
-    overflow: hidden;
-  }
-  .sidebar-active .sidebar-wrapper {
-    height: 880px;
-    position: absolute;
-    overflow: hidden;
-    display: block;
-  }
-  .sidebar-active .sidebar-wrapper {
-    top: 180%;
-  }
-
-  .sidebar-wrapper .sidebar {
-    background-color: white;
+    top: 100%;
   }
 
   .scenes-wrapper {
     margin-top: 0px;
+  }
+
+  .video-wrapper {
+    transform: scale(1);
   }
 
   .scenes-wrapper .col .box-wrapper {
@@ -1205,83 +1190,39 @@ body {
   .pull-up.scenes-wrapper .button {
     bottom: 5%;
   }
+  .sidebar-wrapper {
+    height: 0px;
+    position: absolute;
+    overflow: hidden;
+  }
+  .sidebar-active .sidebar-wrapper {
+    height: 880px;
+    position: absolute;
+    overflow: hidden;
+    display: block;
+  }
+  .sidebar-active .sidebar-wrapper {
+    top: 180%;
+  }
+
+  .sidebar-wrapper .sidebar {
+    background-color: white;
+  }
+
 }
 
 @media screen and (max-width: 600px){
   .pull-up.scenes-wrapper .button {
     bottom: 15%;
   }
-}
-
-
-@media screen and (max-width: 521px){
-  .level .scenes-wrapper .col {
-    margin-left: 0px;
-  }
-
-  .level.level-enterprise .scenes-wrapper .col.col-left .box-wrapper {
-    transform: translate(0%, 0px);
-  }
-}
-
-@media screen and (max-width: 477px){
-  @keyframes make-bigger {
-    0% {
-    }
-    100% {
-      transform: translate(-5px, 250px) scale(2.0);
-    }
-  }
-
-  @keyframes make-bigger2 {
-    0% {
-    }
-    100% {
-      transform: translate(-5px, 300px) scale(3.0);
-    }
-  }
-
-  .pull-up.scenes-wrapper .button {
-    bottom: -50%;
-  }
-
-  .level .scenes-wrapper .title-wrapper.show-on-level div {
-    top: 0px !important;
-    min-width: 100%;
-    left: 0% !important;
-  }
-
   
-}
-
-@media screen and (max-width: 550px){
-  .legend {
-    top: 29%;
+  .container.container-center {
+    overflow: hidden;
   }
 }
 
-@media screen and (max-width: 476px){
-  .legend {
-    top: 350px;
-  }
-}
-@media screen and (max-width: 414px){
-  .legend {
-    top: 395px;
-  }
-}
 
-@media screen and (max-width: 368px){
-  .legend {
-    top: 415px;
-  }
-}
 
-@media screen and (max-width: 340px){
-  .legend {
-    top: 415px;
-  }
-}
 
 
 .pull-up {
@@ -1368,3 +1309,11 @@ body {
     opacity: 1
   }
 }
+
+@media screen and (max-width: 508px){
+  .level.industry .chemicals .col-left .hide-on-level{
+    left: -20%;
+  }
+
+}
+
