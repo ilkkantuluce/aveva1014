@@ -12,7 +12,7 @@ $(document).ready(function() {
 
     if($(window).width() > 800){
       $("html, body").animate({ scrollTop: 0 }, "slow");
-      $('.video-wrapper').css('transform', 'translate(-130%, 0px)');
+      $('.video-wrapper').css('transform', 'translate(-130%, -100px)');
       $('.scenes-wrapper .title-wrapper.show-on-level div').css({'left': '-75%'});
       $('.level .legend.show-on-level').css({'left': '-75%'});
       $('.sidebar-wrapper').css('z-index', '4');
