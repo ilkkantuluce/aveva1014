@@ -410,8 +410,8 @@ body::-webkit-scrollbar {
   .splash.purple h1::after {
     background-size: 3000px 3000px;
     font-size: 80px;
-    -webkit-animation: swipe-splash 2.1s ease-in-out;
-    animation: swipe-splash 2.1s ease-in-out
+    -webkit-animation: swipe-splash 2.5s ease-in-out;
+    animation: swipe-splash 2.5s ease-in-out
   }
 }
 
@@ -2465,7 +2465,44 @@ body::-webkit-scrollbar {
   background-image: url(../images/power.png)
 }
 
-@media screen and (max-width: 800px) {
+
+@media screen and (max-width: 1024px) {
+  .splash.purple h1 {
+    width: 492px;
+    font-size: 51px;
+  }
+
+  .splash.purple h1::after {
+    width: 492px;
+    font-size: 51px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .splash.purple h1 {
+    width: 384px;
+    font-size: 51px;
+  }
+
+  .splash.purple h1::after {
+    width: 384px;
+    font-size: 51px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .splash.purple h1 {
+    width: 410px;
+    font-size: 44px;
+  }
+
+  .splash.purple h1::after {
+    width: 410px;
+    font-size: 44px;
+  }
+}
+
+@media screen and (max-width: 428px) {
   .splash.purple h1 {
     width: 384px;
     font-size: 44px;
@@ -2475,6 +2512,9 @@ body::-webkit-scrollbar {
     width: 384px;
     font-size: 44px;
   }
+}
+
+@media screen and (max-width: 800px) {
   .bg {
     height: 100%;
   }
