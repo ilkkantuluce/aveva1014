@@ -594,8 +594,8 @@ body {
 }
 
 .industry.level-enterprise .chemicals .col-left .video {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
   -webkit-animation-name: make-bigger2;
@@ -1121,7 +1121,7 @@ body {
   .pulse-dot-reverse-mobile.pulse-dot .tooltip::after {
     left: 132px;
   }
-  
+
 
 }
 
@@ -1191,7 +1191,7 @@ body {
   .container.container-center {
     overflow: hidden;
   }
-  
+
   .level-enterprise .level-button-enterprise {
     display: none;
   }
