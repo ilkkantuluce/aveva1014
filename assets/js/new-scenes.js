@@ -28,14 +28,10 @@ $(document).ready(function() {
     }, 2000);
 
 
-    $('.industry .fade').fadeOut(400, 'swing', function() {
+    $('.industry .fade').animate({opacity: "0"}, 400, 'linear', function() {
+      $('.nav.top-nav').animate({marginBottom: "100px"}, 1100, 'swing');
+    }).animate({height: "0"}, 1100, 'swing');
 
-      if($(window).width() > 800){
-        console.log($('.main-title-wrapper.fade').height());
-        $('.nav.top-nav').css({'margin-bottom': $('.main-title-wrapper.fade').height() + 60});
-      }
-
-    });
     $('.industry.level-plant .chemicals .col-left .hide-on-level').animate({top: '100px', opacity: '0'}, 'slow');
     $('.industry.level-enterprise .chemicals .col-right .hide-on-level').animate({top: '100px', opacity: '0'}, 'slow');
 
@@ -67,7 +63,7 @@ $(document).ready(function() {
         $('.level.level-plant .col-enterprise').hide();
       }, 500);
 
-      $('.industry .chemicals .col-left .hide-on-level').css({'animation': 'mymove 2s', 'animation-delay': '0.3s', 'animation-fill-mode': 'forwards'});
+      $('.industry .chemicals .col-left .hide-on-level').css({'animation': 'mymove 2s', 'animation-fill-mode': 'forwards'});
 
       setTimeout(function() {
         $('.industry .chemicals .col-left .hide-on-level').css({'animation': '0s', 'left': '0px', 'top': '0px', 'transition': '0s'});
@@ -107,12 +103,12 @@ $(document).ready(function() {
 
 
     if($(window).width() < 450){
-      
+
       $('.level .scenes-wrapper .title-wrapper.show-on-level div').css({'animation-name': 'show-on-level', 'top': '-20%', 'left': '-15%', 'animation-duration': '1s', 'opacity': '1'});
 
       $('.level.level-plant .col-enterprise').hide();
       $('.level.level-enterprise .col-plant').hide();
-      
+
       setTimeout(function() {
         $('.legend').css({'left': '0%', 'transition': '1s'});
       }, 2000);
@@ -149,7 +145,7 @@ $(document).ready(function() {
           $('.level.level-plant .col-enterprise').hide();
         }, 500);
 
-        $('.industry .chemicals .col-left .hide-on-level').css({'animation': 'mymove 2s', 'animation-delay': '0.3s', 'animation-fill-mode': 'forwards'});
+        $('.industry .chemicals .col-left .hide-on-level').css({'animation': 'mymove 2s', 'animation-fill-mode': 'forwards'});
 
         setTimeout(function() {
           $('.industry .chemicals .col-left .hide-on-level').css({'animation': '0s', 'left': '0px', 'top': '0px', 'transition': '0s'});
