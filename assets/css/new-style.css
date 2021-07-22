@@ -180,6 +180,10 @@ body {
     flex-direction: column;
     justify-content: initial
   }
+
+.scenes-wrapper .scenes.col-wrapper {
+  padding-bottom: 15%;
+}
 }
 
 .col-wrapper .col {
@@ -555,14 +559,14 @@ body {
 }
 
 .industry .chemicals .col-right .video {
-  --scaleAmount: 1.25;
+  --scaleAmount: 1.15;
   --moveLeft: -5px;
   --moveDown: 50px;
   transform: translate(var(--moveLeft), var(--moveDown)) scale(var(--scaleAmount))
 }
 
 .industry .chemicals .col-left .video {
-  --scaleAmount: 1.6;
+  --scaleAmount: 1.45;
   --moveLeft: -10px;
   --moveDown: 25px;
   transform: translate(var(--moveLeft), var(--moveDown)) scale(var(--scaleAmount))
@@ -879,14 +883,16 @@ body {
   font-size: 24px;
   line-height: 32px;
   color: #fff;
-  font-weight: normal
+  font-weight: normal;
+  margin-bottom: 22px;
 }
 
 .sidebar-wrapper .sidebar .purple-gradient-section p {
   font-family: Muli-Regular, Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 0px
+  letter-spacing: 0px;
+  margin-top: 20px;
 }
 
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
@@ -1183,7 +1189,7 @@ body {
   }
 
   .pull-up.scenes-wrapper .button {
-    bottom: -50%;
+    bottom: -75%;
   }
 
   .level .scenes-wrapper .title-wrapper.show-on-level div {
