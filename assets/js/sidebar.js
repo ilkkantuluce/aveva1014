@@ -1,5 +1,7 @@
 $(document).ready(function() {
+    var didit = false;
   $('.pulse-dot').on('click', function() {
+    var that = $(this);
     var sidebar = $(this).data('sidebar');
 
 
@@ -12,18 +14,47 @@ $(document).ready(function() {
 
     if($(window).width() > 1000){
       $("html, body").animate({ scrollTop: 0 }, "slow");
-      $('.video-wrapper').css('transform', 'translate(-130%, -100px)');
+      $('.video-wrapper').css('transform', 'translate(-110%, 0) scale(1.20)');
       $('.scenes-wrapper .title-wrapper.show-on-level div').css({'left': '-75%'});
       $('.level .legend.show-on-level').css({'left': '-75%'});
       $('.sidebar-wrapper').css('z-index', '4');
+
+    var timeoutAmount = '800';
+    if ( didit ) timeoutAmount = '0'
+setTimeout( function() {
+  console.log(parseInt($('.video-wrapper').css('left'), 10));
+    var o1 = that.offset();
+var o2 = $('.sidebar-wrapper').offset();
+var dx = o1.left - o2.left;
+var dy = o1.top - o2.top;
+var distance = Math.sqrt(dx * dx + dy * dy);
+$('.video-wrapper').css('left', (parseInt($('.video-wrapper').css('left'), 10)+(((o2.left/2)-16)-o1.left)));
+console.log('it is: '+o1.left);
+console.log('it should be: '+((o2.left/2)-16));
+console.log('needs to move left: '+(((o2.left/2)-16)-o1.left));
+didit=true;
+}, timeoutAmount);
     }
 
     //Tablet
     if($(window).width() < 1000){
-     
 
-    } 
-    
+    var timeoutAmount = '800';
+    if ( didit ) timeoutAmount = '0'
+setTimeout( function() {
+  console.log(parseInt($('.video-wrapper').css('left'), 10) + $(window).width()/2-16);
+    var o1 = that.offset();
+$('.video-wrapper').css('left', (parseInt($('.video-wrapper').css('left'), 10) + $(window).width()/2-16 - o1.left));
+console.log('it is: '+o1.left);
+console.log('it needs to be: '+($(window).width()/2-16));
+console.log('difference: '+($(window).width()/2-16 - o1.left ));
+console.log('current left: '+(parseInt($('.video-wrapper').css('left'), 10) ));
+console.log('new left: '+(parseInt($('.video-wrapper').css('left'), 10) + $(window).width()/2-16 - o1.left ));
+didit=true;
+}, timeoutAmount);
+
+    }
+
 
     // open sidebar
     $('.industry').addClass('sidebar-active');
@@ -36,7 +67,8 @@ $(document).ready(function() {
   });
 
   $('.sidebar-close').on('click', function() {
-
+    didit = false;
+    $('.video-wrapper').css('left', 0);
 
 
     if($(window).width() > 1000){
@@ -51,10 +83,10 @@ $(document).ready(function() {
 
     //Tablet
     if($(window).width() < 1000){
-     
 
-    } 
-    
+
+    }
+
 
 
     // push video back

@@ -197,6 +197,10 @@ body::-webkit-scrollbar {
   transition: opacity 1s ease-in-out
 }
 
+.start .nav.title-nav {
+  opacity: 0;
+}
+
 @media only screen and (max-width: 1024px) {
   .nav.title-nav {
     position: relative;
@@ -269,7 +273,9 @@ body::-webkit-scrollbar {
 
 @media only screen and (max-width: 480px) {
   .nav .nav-item {
-    flex: 0 0 auto
+    flex: 0 0 auto;
+    margin-right: 40px;
+    min-width: 85px;
   }
 }
 
@@ -447,6 +453,10 @@ body::-webkit-scrollbar {
 .splash .col-right {
   padding-top: 25px;
   transition: opacity 1s ease-in-out
+}
+
+.splash.start .col-right {
+  opacity: 0;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -683,8 +693,12 @@ body::-webkit-scrollbar {
 
 @media only screen and (max-width: 1024px) {
   .slider .slide .col-right {
-    order: 4
+    order: 4;
   }
+
+.slider .slide .title-nav + .col-right {
+  padding-bottom: 40px;
+}
   .slider .slide .col-right.video-wrapper {
     order: 3
   }
@@ -2423,7 +2437,7 @@ body::-webkit-scrollbar {
 }
 
 .splash.purple .slide-consumer-products h1::after {
-  content: "Consumer-packaged Goods";
+  content: "Consumer packaged Goods";
 }
 
 .splash.purple .slide-energy h1::after {
@@ -2456,7 +2470,7 @@ body::-webkit-scrollbar {
   transition: opacity 1s ease-in-out !important;
   opacity: 0;
   position: absolute;
-  height: 115%;
+  height: 100%;
   width: 100%;
 }
 
@@ -2521,11 +2535,13 @@ body::-webkit-scrollbar {
   .splash.purple h1 {
     width: 384px;
     font-size: 44px;
+    max-width: 100%;
   }
 
   .splash.purple h1::after {
     width: 384px;
     font-size: 44px;
+    max-width: 100%;
   }
 }
 

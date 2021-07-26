@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('.fitb-pop');
     $(this).parents('.pop-trigger').removeClass('active');
   });
-  $('body').on('click', '.fitb-pop>div',function(_e){
+  $('body').on('click', '.fitb-pop>div:not(.fitb-close)',function(_e){
     console.log('.fitb-pop>div');
     _e.stopPropagation();
   });

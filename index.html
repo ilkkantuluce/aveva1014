@@ -40,7 +40,7 @@
 
     <title>Aveva | Welcome</title>
   </head>
-  <body class="home splash purple">
+  <body class="home splash start">
 
     <div class="splash-inner container container-center">
       <div class="row container-position col-wrapper">
@@ -55,7 +55,7 @@
           </p>
           <p class="large">
             <strong>
-              Discover how AVEVA software can help you unlock performance intelligence in each of the industries.
+              Discover how AVEVA software can help you unlock performance intelligence in these industries:
             </strong>
           </p>
         </div>
@@ -65,7 +65,7 @@
               <a class="nav-link dark" href="#" data-slide="chemicals">Chemicals</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link dark" href="#" data-slide="consumer-products">Consumer-packaged Goods</a>
+              <a class="nav-link dark" href="#" data-slide="consumer-products">Consumer Packaged Goods</a>
             </li>
             <li class="nav-item">
               <a class="nav-link dark" href="#" data-slide="energy">Oil and Gas</a>
@@ -120,7 +120,7 @@
               <a class="nav-link dark active" href="#" data-slide="chemicals">Chemicals</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link dark" href="#" data-slide="consumer-products">Consumer-packaged Goods</a>
+              <a class="nav-link dark" href="#" data-slide="consumer-products">Consumer Packaged Goods</a>
             </li>
             <li class="nav-item">
               <a class="nav-link dark" href="#" data-slide="energy">Oil and Gas</a>
@@ -132,7 +132,7 @@
         </div>
         <div class="col col-right dark">
           <p class="large">
-            AVEVA provides expert software to the top 15 leading chemical companies, enabling them to unify data, drive engineering excellence and operational agility, and support circularity and sustainable performance.
+            AVEVA provides expert software to the top 15 leading chemical companies, enabling them to unify data, drive engineering excellence and operational agililty, and support circularity and sustainable performance.
           </p>
           <a href="chemicals.html" class="button">Get Started</a>
         </div>
@@ -141,7 +141,7 @@
       <div class="container container-center container-position slide slide-consumer-products col-wrapper" style="display: none" data-slide="consumer-products">
         <div class="col col-left">
           <div class="text-wrapper">
-            <h1>Consumer-packaged Goods</h1>
+            <h1>Consumer Packaged Goods</h1>
           </div>
         </div>
         <div class="col col-right">
@@ -158,7 +158,7 @@
               <a class="nav-link dark" href="#" data-slide="chemicals">Chemicals</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link dark active" href="#" data-slide="consumer-products">Consumer-packaged Goods</a>
+              <a class="nav-link dark active" href="#" data-slide="consumer-products">Consumer Packaged Goods</a>
             </li>
             <li class="nav-item">
               <a class="nav-link dark" href="#" data-slide="energy">Oil and Gas</a>
@@ -196,7 +196,7 @@
               <a class="nav-link dark" href="#" data-slide="chemicals">Chemicals</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link dark" href="#" data-slide="consumer-products">Consumer-packaged Goods</a>
+              <a class="nav-link dark" href="#" data-slide="consumer-products">Consumer Packaged Goods</a>
             </li>
             <li class="nav-item">
               <a class="nav-link dark active" href="#" data-slide="energy">Oil and Gas</a>
@@ -234,7 +234,7 @@
               <a class="nav-link dark" href="#" data-slide="chemicals">Chemicals</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link dark" href="#" data-slide="consumer-products">Consumer-packaged Goods</a>
+              <a class="nav-link dark" href="#" data-slide="consumer-products">Consumer Packaged Goods</a>
             </li>
             <li class="nav-item">
               <a class="nav-link dark" href="#" data-slide="energy">Oil and Gas</a>
@@ -264,12 +264,16 @@
     <script>
       document.addEventListener('DOMContentLoaded', () => {
       let vidElem = document.querySelector('.background-video');
+      let timeoutTime = 3000;
       let videoElement = $('.background-video');
+      if ( $.cookie("last-page") == 'nothome' ) {
+        timeoutTime = 0;
+      }
       setTimeout(function() {
         videoElement.fadeIn(400, 'swing', function() {
           vidElem.play();
         });
-      }, 2000);
+      }, timeoutTime);
       vidElem.addEventListener('timeupdate', function () {
 if (vidElem.currentTime >= 15) {
         vidElem.currentTime = 11.25;
