@@ -39,6 +39,16 @@ didit=true;
     //Tablet
     if($(window).width() < 1000){
 
+      
+      $('.legend').css({'left': '-200%'});
+      $('.title-wrapper').css({'opacity': '0'});
+      $(window).scrollTop(150);
+      setTimeout(function() {
+        $('.title-wrapper').css({'margin-top': '-420px'});
+      }, 500);
+     
+      
+
     var timeoutAmount = '800';
     if ( didit ) timeoutAmount = '0'
 setTimeout( function() {
@@ -83,8 +93,9 @@ didit=true;
 
     //Tablet
     if($(window).width() < 1000){
-
-
+      $('.legend').css({'left': '0%'});
+      $('.title-wrapper').css({'opacity': '1'});
+      $('.title-wrapper').css({'margin-top': '0px'});
     }
 
 
