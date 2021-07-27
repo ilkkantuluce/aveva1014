@@ -216,6 +216,7 @@ $(document).ready(function() {
 
     });
 
+    $('html, body').delay(1000).animate({scrollTop: 150 }, 800);
 
   });
 

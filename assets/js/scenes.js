@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function($) {
   $('.level-button').on('click', function(e) {
     e.preventDefault();
 
@@ -42,6 +42,7 @@ $(document).ready(function() {
       $('.pulse-dot').addClass('show-dot');
       $('.show-on-level').addClass('fade-in');
     }, 3000);
+    $('html, body').delay(1000).animate({scrollTop: 150 }, 800);
   });
 });
 
