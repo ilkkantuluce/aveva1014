@@ -308,7 +308,7 @@ body::-webkit-scrollbar {
   font-family: Barlow-Bold, Arial, Helvetica, sans-serif;
   font-size: 80px;
   color: #6b05a8;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 @media only screen and (min-width: 1025px) {
@@ -391,12 +391,13 @@ body::-webkit-scrollbar {
   position: absolute;
   top: 0;
   left: 0;
+  font-weight: 700;
   z-index: 5;
   font-family: Barlow-Bold, Arial, Helvetica, sans-serif;
   font-size: 80px;
   color: #6b05a8;
   -webkit-animation: swipe-splash 2.4s ease-in-out;
-  animation: swipe-splash 2.4s ease-in-out
+  animation: swipe-splash 2.4s ease-in-out;
 }
 
 @media only screen and (min-width: 1025px) {
@@ -657,7 +658,7 @@ body::-webkit-scrollbar {
   font-size: 80px;
   color: #6b05a8;
   -webkit-font-smoothing: antialiased;
-  font-weight: 400;
+  /* font-weight: 400; */
 }
 
 @media only screen and (min-width: 1025px) {
