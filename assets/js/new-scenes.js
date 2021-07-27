@@ -54,7 +54,7 @@ $(document).ready(function() {
       if($(window).width() > 1000){
         $('.nav.top-nav').animate({marginBottom: "100px"}, 1100, 'swing');
       }
-    }).animate({height: "0"}, 1100, 'swing');
+    }).animate({height: "0", padding: "0"}, 1100, 'swing');
 
     $('.industry.level-plant .chemicals .col-left .hide-on-level').animate({top: '100px', opacity: '0'}, 'slow');
     $('.industry.level-enterprise .chemicals .col-right .hide-on-level').animate({top: '100px', opacity: '0'}, 'slow');
