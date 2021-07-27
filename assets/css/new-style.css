@@ -1321,12 +1321,14 @@ body {
     }
   }
 
+  .sidebar-active .sidebar-wrapper {
+    top: 550px;
+  }
+
   .level .scenes-wrapper .col {
     margin-bottom: 260%;
   }
 
-.level .scenes-wrapper.power .col {
-}
 
   .level .col-wrapper .col .video-wrapper .video-overlay {
     margin-top: 510px;

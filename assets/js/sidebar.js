@@ -21,23 +21,23 @@ $(document).ready(function() {
 
     var timeoutAmount = '800';
     if ( didit ) timeoutAmount = '0'
-setTimeout( function() {
-  console.log(parseInt($('.video-wrapper').css('left'), 10));
-    var o1 = that.offset();
-var o2 = $('.sidebar-wrapper').offset();
-var dx = o1.left - o2.left;
-var dy = o1.top - o2.top;
-var distance = Math.sqrt(dx * dx + dy * dy);
-$('.video-wrapper').css('left', (parseInt($('.video-wrapper').css('left'), 10)+(((o2.left/2)-16)-o1.left)));
-console.log('it is: '+o1.left);
-console.log('it should be: '+((o2.left/2)-16));
-console.log('needs to move left: '+(((o2.left/2)-16)-o1.left));
-didit=true;
-}, timeoutAmount);
+    setTimeout( function() {
+      console.log(parseInt($('.video-wrapper').css('left'), 10));
+        var o1 = that.offset();
+    var o2 = $('.sidebar-wrapper').offset();
+    var dx = o1.left - o2.left;
+    var dy = o1.top - o2.top;
+    var distance = Math.sqrt(dx * dx + dy * dy);
+    $('.video-wrapper').css('left', (parseInt($('.video-wrapper').css('left'), 10)+(((o2.left/2)-16)-o1.left)));
+    console.log('it is: '+o1.left);
+    console.log('it should be: '+((o2.left/2)-16));
+    console.log('needs to move left: '+(((o2.left/2)-16)-o1.left));
+    didit=true;
+    }, timeoutAmount);
     }
 
     //Tablet
-    if($(window).width() < 1000){
+    if($(window).width() < 1000 && $(window).width() > 380){
 
 
       $('.legend').css({'left': '-200%'});
@@ -48,33 +48,51 @@ didit=true;
       //$('.title-wrapper').css({'transition': '0s'});
 
 
+      var timeoutAmount = '800';
+      if ( didit ) timeoutAmount = '0'
+      setTimeout( function() {
+        console.log(parseInt($('.video-wrapper').css('left'), 10) + $(window).width()/2-16);
+          var o1 = that.offset();
+      $('.video-wrapper').css('left', (parseInt($('.video-wrapper').css('left'), 10) + $(window).width()/2-16 - o1.left));
+      console.log('it is: '+o1.left);
+      console.log('it needs to be: '+($(window).width()/2-16));
+      console.log('difference: '+($(window).width()/2-16 - o1.left ));
+      console.log('current left: '+(parseInt($('.video-wrapper').css('left'), 10) ));
+      console.log('new left: '+(parseInt($('.video-wrapper').css('left'), 10) + $(window).width()/2-16 - o1.left ));
+      didit=true;
+      }, timeoutAmount);
 
-
-    var timeoutAmount = '800';
-    if ( didit ) timeoutAmount = '0'
-setTimeout( function() {
-  console.log(parseInt($('.video-wrapper').css('left'), 10) + $(window).width()/2-16);
-    var o1 = that.offset();
-$('.video-wrapper').css('left', (parseInt($('.video-wrapper').css('left'), 10) + $(window).width()/2-16 - o1.left));
-console.log('it is: '+o1.left);
-console.log('it needs to be: '+($(window).width()/2-16));
-console.log('difference: '+($(window).width()/2-16 - o1.left ));
-console.log('current left: '+(parseInt($('.video-wrapper').css('left'), 10) ));
-console.log('new left: '+(parseInt($('.video-wrapper').css('left'), 10) + $(window).width()/2-16 - o1.left ));
-didit=true;
-}, timeoutAmount);
 
     }
 
 
+    //Mobile
     if($(window).width() < 380){
-      $('.title-wrapper').css({'margin-top': '-540px'});
-    }
 
-    if($(window).width() < 350){
-      $('.title-wrapper').css({'margin-top': '-590px'});
-    }
+      $('.legend').css({'left': '-200%'});
+      $('.title-wrapper').css({opacity: '0'});
+      setTimeout( function() { $('.col-left .title-wrapper').css({'margin-top': '-600px'}); }, 400);
+      setTimeout( function() { $('.col-right .title-wrapper').css({'margin-top': '-500px'}); }, 400);
+      //$('html, body').animate({scrollTop: 150 }, 500);
+      //$('.title-wrapper').animate({opacity: '0'}, 400, 'swing', function() {$(this).css({'margin-top': '-390px'});});
+      //$('.title-wrapper').css({'transition': '0s'});
 
+
+      var timeoutAmount = '800';
+      if ( didit ) timeoutAmount = '0'
+      setTimeout( function() {
+        console.log(parseInt($('.video-wrapper').css('left'), 10) + $(window).width()/2-16);
+          var o1 = that.offset();
+      $('.video-wrapper').css('left', (parseInt($('.video-wrapper').css('left'), 10) + $(window).width()/2-16 - o1.left));
+      console.log('it is: '+o1.left);
+      console.log('it needs to be: '+($(window).width()/2-16));
+      console.log('difference: '+($(window).width()/2-16 - o1.left ));
+      console.log('current left: '+(parseInt($('.video-wrapper').css('left'), 10) ));
+      console.log('new left: '+(parseInt($('.video-wrapper').css('left'), 10) + $(window).width()/2-16 - o1.left ));
+      didit=true;
+      }, timeoutAmount);
+      
+    }
 
 
     // open sidebar
