@@ -1088,7 +1088,7 @@ body {
   }
 
   .sidebar-active .sidebar-wrapper {
-    top: 1166px;
+    top: 1000px;
   }
 
   .sidebar-wrapper .sidebar {
@@ -1210,7 +1210,7 @@ body {
   }
 
   .sidebar-active .sidebar-wrapper {
-    top: 1100px;
+    top: 740px;
   }
 
   .scenes-wrapper .show-on-level.title-wrapper p {

@@ -43,9 +43,9 @@ didit=true;
       $('.legend').css({'left': '-200%'});
       $('.title-wrapper').css({'opacity': '0'});
       $(window).scrollTop(150);
-      setTimeout(function() {
-        $('.title-wrapper').css({'margin-top': '-420px'});
-      }, 500);
+      $('.title-wrapper').css({'margin-top': '-390px'});
+      $('.title-wrapper').css({'transition': '0s'});
+    
      
       
 
@@ -64,6 +64,16 @@ didit=true;
 }, timeoutAmount);
 
     }
+    
+    
+    if($(window).width() < 380){
+      $('.title-wrapper').css({'margin-top': '-540px'});
+    }
+
+    if($(window).width() < 350){
+      $('.title-wrapper').css({'margin-top': '-590px'});
+    }
+
 
 
     // open sidebar
