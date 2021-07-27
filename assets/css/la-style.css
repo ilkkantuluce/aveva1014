@@ -16,7 +16,7 @@ body {font-family:Barlow-Light, Arial, Helvetica, sans-serif;}
 .active .fitb-pop {display: flex; }
 .fitb-pop>div:not(.fitb-close) {margin: auto 0; width: 100%; max-width: 750px; padding: 0!important; height: 422px; max-height: calc( ( 100vw - 80px ) * .5625 ); }
 
-.fitb-close {position: absolute;top: 24px;right: 35px;height: auto;width: 20px;cursor: pointer;}
+.fitb-close {position: absolute;top: 24px;right: 27px;height: auto;width: 20px;cursor: pointer;}
 .fitb-close>img {display: block; width: 100%; height: auto; }
 
 .background-video {position: absolute; z-index: -1; bottom: 0; width: 100%; height: auto; }

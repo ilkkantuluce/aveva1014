@@ -543,6 +543,7 @@ body::-webkit-scrollbar {
 .slider .slider-arrows {
   position: relative;
   z-index: 1000;
+  z-index: 0;
 }
 
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
@@ -2438,7 +2439,7 @@ body::-webkit-scrollbar {
 }
 
 .splash.purple .slide-consumer-products h1::after {
-  content: "Consumer packaged Goods";
+  content: "Consumer Packaged Goods";
 }
 
 .splash.purple .slide-energy h1::after {
